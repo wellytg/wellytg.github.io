@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.echarges.co.zw/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 31 Oct 2019 15:09:58 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="Charges">
+    <meta name="author" content="">
+<title> TRANSACTOR | Charges Calculator</title>
+
+<link href="css/bootstrap.css" rel="stylesheet">
+<link href="css/responsive-nav.css" rel="stylesheet">
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<!--<style>
+#mx-nav a[href^="/"] {
+
+line-height: 50px;
+border:5px dashed  #0a3f90;
+
+color: #0a3f90;
+border-radius: 4px;
+text-transform: uppercase;
+}
+.sidr-class-mxnav li a[href^="/"] {
+	color: rgb(100,100,170);
+	font-weight: 700;
+	border-bottom: 3px solid rgb(100,100,170);
+	/* font-size: 18px; */
+	text-transform: uppercase;
+	padding-bottom: 10px;
+	/* width: 100px; */
+}
+</style><style>
+body{
+background-color:#E2F5FE;
+}
+#top-bar h1{
+background-color:#0a3f90;
+}
+.shorts{
+background-color:#f9746a;
+}
+#amount {
+    border: 5px solid #8b99cb;
+	}
+.data-stream {
+
+    background-color: #d2d2f0;
+	}
+#btn-calc{
+background-color:#f9746a1f;
+}
+</style><link href='css/mains262ea.css?ver=1.2'  rel='stylesheet'><style>
+	small{
+		text-transform: uppercase;
+font-size: 10px;
+color: gray;
+	}
+.admx-card h3 {
+	font-family: 'Roboto Condensed', sans-serif;
+	margin: 0;
+	margin-bottom: 10px;
+	font-size: 16px;
+	color: black;
+	/* text-transform: uppercase; */
+}
+	.admx-card p {
+
+    font-size: 13px;
+    color: #848486;
+
+}
+</style>-->
+
+</head>
+
+<body id="home">
+ <!--<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','../www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-103950550-1', 'auto');
+  ga('send', 'pageview');
+
+</script>-->
+
+
+<div class="top-bar" id="top-bar">
+<div class="container-fluid">
+    <div class="row">
+   <div class="col-md-12">
+    <div id="mx-nav">
+       <h1>TRANSACTOR | IMT & Bank Charges Calculator</h1>
+    </div>
+
+          </div>
+    </div>
+   </div>
+</div>
+
+<div class="content">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-1">
+
+          </div>
+          <div class="col-md-7">
+          <div class="calc-card">
+           <div class="row">
+           <div class="col-md-12" style="text-align:center">
+            <h1 style="text-align:center">Enter Amount</h1>
+            <input   style="text-align:center; margin:0px auto; display:inline-block;" type="text" id="amount" name="amount" placeholder="Amount" data-parsley-required="true" />
+            </div>
+          <div class="col-md-12" style="text-align:center">
+         <p id="btn-calc">------</p>
+          </div>
+                      <div class="col-md-12" style="text-align:center" >
+                    <!--  <div id="notify">
+         <p>Please note ecocash increased tariffs from <b>5 August 2019</b></p>
+                  <p>Minimun Balance is the amount required in your ecocash to sucessfully complete your transcation</p>		         </div>
+          </div> -->
+          <div class="col-md-12" style="text-align:center">
+         <p id="calc-error"></p>
+          </div>
+<div class="col-md-12">
+  <div class="data-stream">
+
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card-result borderright">
+          <h2>Transfer Charges + IMT 2% Tax</h2>
+            <li id="sendmny"> - </li>
+	           <strong><span class="min" id="min-send"></span></strong>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+        <div class="card-result borderright">
+          <h3>Transfer Charges</h3>
+            <li id="mfee"> $15 </li>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="col-md-12">
+  <div class="data-stream">
+
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card-result borderright">
+          <h2>POS Charges + IMT 2% Tax </h2>
+              <li id="unreg"> - </li>
+                <strong><span class="min" id="min-unreg"></span></strong>
+        </div>
+      </div>
+
+      <div class="col-md-6">
+      <div class="card-result borderright">
+          <h3>POS Bank Charges </h3>
+            <li id="cashout"> - </li>
+      </div>
+    </div>
+
+    </div>
+  </div>
+</div>
+
+<div class="col-md-12">
+  <div class="row">
+
+       <div class="col-md-6">
+         <div class="card-result data-stream">
+           <h2>IMT 2% Tax</h2>
+            <li id="gvtper"> - </li>
+        </div>
+		   </div>
+
+  </div>
+</div>
+
+<div class="col-md-12">
+	<div class="row">
+    <div class="col-md-12">
+      <div class="card-result data-stream">
+        <h2>To Successfully Transact $<span id="amtspan"></span> A Minimum Balance of</h2>
+          <li id="rcvmny"> - </li>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+</div>
+
+
+<div class="col-md-12">
+    <div class="card-other">
+	     <h1>Note On Charges</h1>
+        	<p>IMT Tax free threshold for Transactions for less than $ZWL100</p>
+          <p>IMT Tax free threshold for Transactions for less than $ZWL100</p>
+          <p>IMT Tax free threshold for Transactions for less than $ZWL100</p>
+  <!-- <p>Balance Inquiry <strong>$0.15</strong></p>
+   <p>Wallet to Bank <strong>$0.43</strong></p>
+   <p>Request Bank Balance <strong>$0.09</strong></p>
+   <p>Request Bank Statement <strong>$0.30</strong></p>    </div>-->
+
+  <!--  </div>
+          </div>
+    		</div>
+         		 	  <div class="pmaincard">
+		 	  	<div class="row">
+
+	  <div class="col-md-6">
+	   <div class="admx-card">
+	   	<a href="https://www.zimexapp.co.zw/" target="_blank" style="text-decoration: none;">
+	   	<small>Marketplace</small>
+	   	<h3>Get New Clients</h3>
+	   	<p>Do you sell cars, furniture, clothes, book or any products. Click the link below to reach new customers, get new leads, improve your sales online, all for free</p></a>
+	   	<a class="dmx-link" href="https://www.zimexapp.co.zw/" target="_blank">www.zimexapp.co.zw</a>
+	   </div>
+				  </div>
+  				  <div class="col-md-6">
+	   <div class="admx-card">
+	   	<a href="https://www.elitepages.co.zw/" target="_blank" style="text-decoration: none;">
+	   	<small>Service</small>
+	   	<h3>Modern Web Services</h3>
+	   	<p>Elitepages helps your business grow through innovative and current website design trends, hosting and application development services.</p></a>
+	   	<a class="dmx-link" href="https://www.elitepages.co.zw/" target="_blank">www.elitepages.co.zw</a>
+	   </div>
+				  </div>
+           </div>
+          </div>
+          </div>
+
+          <div class="col-md-4">
+          <div class="shortcard">
+
+          <h1>Handy Shortcuts</h1>
+          		<div class="shorts">
+          <p>Send Money</p>
+
+          <p>*151*1*1*number*amount#</p>
+          </div>
+           <div class="shorts">
+          <p>Cashout</p>
+
+          <p>*151*3*1*agentcode*amount#</p>
+          </div>
+           <div class="shorts">
+          <p>Pay Merchant</p>
+          <p>*151*2*2*merchantcode*amount#</p>
+          </div>          </div>-->
+
+     </div>
+      </div>
+        </div>
+</div>
+ <div class="strip">
+<div class="container">
+<div class="row">
+ <div class="col-md-12">
+
+
+
+  </div>
+</div>
+</div></body>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/responsive-nav.min.js"></script>
+<script src="js/big.min.js"></script>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', function() {
+  navigator.serviceWorker.register('sw.js').then(function(registration) {
+
+  // Registration was successful
+  console.log('Registered!');
+  }, function(err) {
+  // registration failed :(
+  console.log('ServiceWorker registration failed: ', err);
+  }).catch(function(err) {
+  console.log(err);
+  });
+  });
+  } else {
+  console.log('service worker is not supported');
+  }
+  </script>
+<script>
+
+$(document).ready(function () {
+    //initialize swiper when document ready
+var timeoutPromise;
+
+ $('#amount').val('');
+/*var sendGoogle =function(){
+var value = Big($('#amount').val());
+ga('send', 'pageview', '/amount/ecocash/' + value);
+} -->*/
+var calcAmt =function(){
+	var val = Big($('#amount').val());
+
+    var twoper =val * 0.02;
+    var swiper =val * 0.04499;
+    var pos =val * 0.02499;
+	twoperhtml =twoper.toFixed(2);
+  swiperhtml =swiper.toFixed(2);
+  poshtml =pos.toFixed(2);
+	if (val >99.99){
+	 $('#gvtper').html('$'+ twoperhtml);
+	}
+	else{
+		 $('#gvtper').html(' - ');
+	}
+	calc_error ="";
+switch (true) {
+  case val ==0:
+  var sendmny =0;
+  var unreg = 0;
+  var cashout = 0;
+  var mfee =0;
+  var rcvmny = 0;
+
+  break;
+  case val > 0.99 && val < 9.99:
+
+   var sendmny =0 ;
+  var unreg = 3 ;
+  var cashout = 3;
+  var mfee =Number(twoperhtml) + Number(0.05);
+  var rcvmny = 'N/A'
+
+
+  break;
+
+  case val > 9.99 && val < 99.99:
+
+  var sendmny =15 ;
+  var unreg = 3 ;
+  var cashout = 3;
+  var mfee =15;
+  var rcvmny = val.plus(cashout)
+
+ var minsend=val.plus(sendmny);
+  var mincashout = val.plus(cashout);
+  var minunreg = val.plus(unreg);
+
+  break;
+
+  case val > 99.99 && val < 120:
+
+ var sendmny =15 + twoper;
+ var unreg = 3 + twoper;
+ var cashout = 3;
+ var mfee =15
+ var rcvmny = val.plus(cashout)
+
+ var minsend=val.plus(sendmny);
+ var mincashout = val.plus(cashout);
+ var minunreg = val.plus(unreg);
+
+ break;
+
+   case val > 119.99 && val < 10000:
+
+  var sendmny =15 + twoper;
+  var unreg = 0 + swiper;
+  var cashout = Number(poshtml);
+  var mfee =15
+  var rcvmny = val.plus(cashout)
+
+  var minsend=val.plus(sendmny);
+  var mincashout = val.plus(cashout);
+  var minunreg = val.plus(unreg);
+
+  break;
+
+  case val > 10000 && val < 20000.01:
+
+  var sendmny =200;
+  var unreg = 200;
+  var cashout = 20;
+  var mfee =20
+  var rcvmny = val.plus(cashout)
+
+  var minsend=val.plus(sendmny);
+  var mincashout = val.plus(cashout);
+  var minunreg = val.plus(unreg);
+
+  break;
+  case val > 20000:
+
+  var calc_error ='Zipit maximum amount per transcation is $20 000, per day $100 000';
+    var unreg = 0;
+
+  var sendmny =0;
+
+  var cashout = "0.00";
+  var mfee =0;
+  var rcvmny = 0;
+
+   var minsend=0;
+  var mincashout = 0;
+  var minunreg = 0;
+
+  break;
+}
+
+ $('#calc-error').html(calc_error);
+
+  $('#sendmny').html('$' + sendmny.toFixed(2))
+ $('#min-send').html('Minimun Balance $' + minsend.toFixed(2))
+ $('#min-cashout').html('Minimun Balance $' + mincashout.toFixed(2))
+ $('#min-unreg').html('Minimun Balance $' + minunreg.toFixed(2))
+  $('#unreg').html('$' + unreg.toFixed(2))
+  $('#cashout').html(cashout)
+
+   $('#mfee').html(mfee.toFixed(2))
+
+  $('#amtspan').html(val.toFixed(2))
+
+  $('#rcvmny').html('$' + minsend)
+
+	}
+
+
+
+    $('#amount').on('input',function(){
+		calcAmt();
+  window.clearTimeout(timeoutPromise);
+  timeoutPromise = window.setTimeout(sendGoogle,5000);
+		});
+
+	$('#btn-calc').on('click',function(){
+		calcAmt();
+		 window.clearTimeout(timeoutPromise);
+		sendGoogle();
+		});
+  });
+</script>
+
+</body>
+
+<!-- Mirrored from www.echarges.co.zw/ by HTTrack Website Copier/3.x [XR&CO'2014], Thu, 31 Oct 2019 15:10:03 GMT -->
+</html>
