@@ -144,7 +144,7 @@ background-color:#f9746a1f;
     <div class="card-other">
 	     <h1>Note On Charges</h1>
           <p>Charges above may vary from bank to bank, an average of 3 bank charges<span> was used to come up with the the above as at time of development</span></p>
-        	<p>IMT Tax free threshold for Transactions for less than <strong>$ZW 100</strong></p>
+        	<p>IMT Tax free threshold for Transactions for less than <strike><strong>$ZW 100</strong></strike> still @<strong>$ZW 20</strong></p>
           <p>Interbank transfer Charges are fixed for Zipit <strong>$ZW 15</strong> (Average)</p>
           <p>Intrabank transfer Charges are fixed and cheaper <strong>$ZW 6</strong> (Average)</p>
     </div>
@@ -174,7 +174,7 @@ var calcAmt =function(){
   swipehtml =swipe.toFixed(2);
   poshtml =pos.toFixed(2);
 
-  if (val >99.99){
+  if (val >19.99){
 	 $('#imt2tax').html('$'+ imt2html);
 	}
 	else{
@@ -200,8 +200,8 @@ switch (true) {
   break;
 
   case val > 9.99 && val < 99.99:
-      var transferBank =15 ;
-      var ImtPos = 3 ;
+      var transferBank =15 + imt2 ;
+      var ImtPos = 3 + imt2 ;
       var posChg = 3;
 
       var minBalreq = val.plus(posChg)
