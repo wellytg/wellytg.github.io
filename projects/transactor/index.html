@@ -93,7 +93,7 @@ background-color:#f9746a1f;
               <div class="col-md-6">
                 <div class="card-result borderright">
                   <h3>Transfer Charges</h3>
-                    <li id="transferChg"> $15 </li>
+                    <li id="transferChg"> $25 </li>
                 </div>
               </div>
 
@@ -143,10 +143,10 @@ background-color:#f9746a1f;
 <div class="col-md-12">
     <div class="card-other">
 	     <h1>Note On Charges</h1>
-          <p>Charges above may vary from bank to bank, an average of 3 bank charges<span> was used to come up with the the above as at time of development</span></p>
+          <p>Charges above may vary from bank to bank, an average of <strike><strong>$ZW 3</strong></strike> $ZW 10 bank charges<span> was used to come up with the the above as at time of development</span></p>
         	<p>IMT Tax free threshold for Transactions for less than <strike><strong>$ZW 100</strong></strike> still @<strong>$ZW 20</strong></p>
-          <p>Interbank transfer Charges are fixed for Zipit <strong>$ZW 15</strong> (Average)</p>
-          <p>Intrabank transfer Charges are fixed and cheaper <strong>$ZW 6</strong> (Average)</p>
+          <p>Interbank transfer Charges are fixed for Zipit <strong>$ZW 25</strong> (Average)</p>
+          <p>Intrabank transfer Charges are fixed and cheaper <strong>$ZW 15</strong> (Average)</p>
     </div>
 </div>
 
@@ -191,31 +191,25 @@ switch (true) {
       var minBalreq = 0;
   break;
 
-  case val > 0.99 && val < 9.99:
-      var transferBank =0 ;
-      var ImtPos = 3 ;
-      var posChg = 3;
 
-      var minBalreq = 'N/A'
-  break;
 
-  case val > 9.99 && val < 99.99:
-      var transferBank =15 + imt2 ;
-      var ImtPos = 3 + imt2 ;
-      var posChg = 3;
+  case val > 0.99 && val < 399.99:
+      var transferBank = 25 + imt2 ;
+      var ImtPos = 10 + imt2 ;
+      var posChg = 10;
 
       var minBalreq = val.plus(posChg)
 
-      var minBalTransfer=val.plus(transferBank);
+      var minBalTransfer = val.plus(transferBank);
       var minposChg = val.plus(posChg);
       var minImtPos = val.plus(ImtPos);
   break;
 
-  case val > 99.99 && val < 120:
+  case val > 99.99 && val < 400:
 
        var transferBank =15 + imt2;
-       var ImtPos = 3 + imt2;
-       var posChg = 3;
+       var ImtPos = 10 + imt2;
+       var posChg = 10;
 
        var minBalreq = val.plus(posChg)
 
@@ -224,7 +218,7 @@ switch (true) {
        var minImtPos = val.plus(ImtPos);
   break;
 
-  case val > 119.99 && val < 10000:
+  case val > 400 && val < 10000:
         var transferBank =15 + imt2;
         var ImtPos = 0 + swipe;
         var posChg = Number(poshtml);
