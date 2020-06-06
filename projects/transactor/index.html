@@ -206,43 +206,21 @@ switch (true) {
       var minImtPos = val.plus(ImtPos);
   break;
 
-  case val > 99.99 && val < 400:
+ 
 
-       var transferBank =banktcharge + imt2;
-       var ImtPos = 10 + imt2;
-       var posChg = 10;
-
-       var minBalreq = val.plus(posChg)
-
-       var minBalTransfer=val.plus(transferBank);
-       var minposChg = val.plus(posChg);
-       var minImtPos = val.plus(ImtPos);
-  break;
-
-  case val > 400 && val < 9999.99:
+  case val > 400 && val < 19999.99:
         var transferBank =banktcharge + imt2;
         var ImtPos = 0 + swipe;
         var posChg = Number(poshtml);
 
         var minBalreq = val.plus(posChg)
-
+var transferChg =banktcharge + imt2;	
         var minBalTransfer=val.plus(transferBank);
         var minposChg = val.plus(posChg);
         var minImtPos = val.plus(ImtPos);
   break;
 
-  case val > 9999.99 && val < 20000.01:
-        var transferBank =banktcharge;
-        var ImtPos = 0 + swipe;
-        var posChg = Number(poshtml);
-        var transferChg =banktcharge
-        var minBalreq = val.plus(posChg)
-
-        var minBalTransfer=val.plus(transferBank);
-        var minposChg = val.plus(posChg);
-        var minImtPos = val.plus(ImtPos);
-  break;
-
+  
   case val > 20000:
         var calc_error ='Zipit maximum amount per transcation is $20 000, per day $100 000';
         var ImtPos = 0;
