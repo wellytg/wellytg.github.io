@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+
+
+<meta http-equiv="content-type" content="text/html;charset=UTF-8" />
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<meta name="description" content="Charges">
+<meta name="author" content="Teknolgenie">
+
+<title> TRANSACTOR | Charges Calculator</title>
+
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+<style>
+body{
+background-color:#dddddd;
+}
+#top-bar h1{
+background-color:#575757;
+}
+.shorts{
+background-color:#f9746a;
+}
+#amount {
+    border: 3px solid #575757;
+	}
+.data-stream {
+
+    background-color: #575757;
+	}
+#btn-calc{
+background-color:#f9746a1f;
+}
+</style>
+
+
+
+</head>
+
+<body id="home">
+
+<div class="top-bar" id="top-bar">
+<div class="container-fluid">
+    <div class="row">
+   <div class="col-md-12">
+    <div id="mx-nav">
+       <h1>TRANSACTOR | IMT & Bank Charges Calculator</h1>
+    </div>
+
+          </div>
+    </div>
+   </div>
+</div>
+
+<div class="content">
+  <div class="container">
+    <div class="row">
+    <div class="col-md-1">
+
+          </div>
+          <div class="col-md-8">
+          <div class="calc-card">
+           <div class="row">
+           <div class="col-md-12" style="text-align:center">
+            <h1 style="text-align:center">Enter Amount</h1>
+            <input   style="text-align:center; margin:0px auto; display:inline-block;" type="text" id="amount" name="amount" placeholder="Amount" data-parsley-required="true" />
+            </div>
+          <div class="col-md-12" style="text-align:center">
+         <p id="btn-calc">------</p>
+          </div>
+  <div class="col-md-12" style="text-align:center" >
+    <div class="col-md-12" style="text-align:center">
+           <p id="calc-error"></p>
+    </div>
+
+  <div class="col-md-12">
+    <div class="data-stream">
+      <div class="row">
+
+              <div class="col-md-6">
+                <div class="card-result borderright">
+                  <h2>Transfer Charges + IMT 2% Tax</h2>
+                    <li id="transferBank"> - </li>
+        	           <strong><span class="min" id="min-Balreq"></span></strong>
+                </div>
+              </div>
+
+              <div class="col-md-6">
+                <div class="card-result borderright">
+                  <h3>Transfer Charges</h3>
+                    <li id="transferChg"> $30 </li>
+                </div>
+              </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="data-stream">
+      <div class="row">
+
+            <div class="col-md-6">
+              <div class="card-result borderright">
+                <h2>POS Charges + IMT 2% Tax </h2>
+                    <li id="ImtPos"> - </li>
+                      <strong><span class="min" id="min-ImtPos"></span></strong>
+              </div>
+            </div>
+
+            <div class="col-md-6">
+            <div class="card-result borderright">
+                <h3>POS Bank Charges </h3>
+                  <li id="posChg"> - </li>
+            </div>
+          </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-12">
+    <div class="row">
+
+         <div class="col-md-6">
+           <div class="card-result data-stream">
+             <h2>IMT 2% Tax</h2>
+              <li id="imt2tax"> - </li>
+          </div>
+  		   </div>
+
+    </div>
+  </div>
+
+  </div>
+</div>
+
+<div class="col-md-12">
+    <div class="card-other">
+	     <h1>Note On Charges</h1>
+          <p>Charges above may vary from bank to bank, an average of <strike><strong>$ZW 3</strong></strike> $ZW 10 bank charges<span> was used to come up with the the above as at time of development</span></p>
+        	<p>IMT Tax free threshold for Transactions for less than <strike><strong>$ZW 100</strong></strike> still @<strong>$ZW 20</strong></p>
+          <p>Interbank transfer Charges are fixed for Zipit <strong>$ZW 25</strong> (Average)</p>
+          <p>Intrabank transfer Charges are fixed and cheaper <strong>$ZW 15</strong> (Average)</p>
+    </div>
+</div>
+
+
+</div>
+</body>
+
+<!-- Bootstrap core JavaScript
+    ================================================== -->
+<!-- Placed at the end of the document so the pages load faster -->
+<script src="js/jquery-1.11.3.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/responsive-nav.min.js"></script>
+<script src="js/big.min.js"></script>
+
+<script>
+$(document).ready(function () {
+
+var calcAmt =function(){
+    var val = Big($('#amount').val());
+    var imt2 =val * 0.02;
+	var banktcharge = val * 0.01
+    var swipe =val * 0.04499;
+    var pos =val * 0.02499;
+	imt2html =imt2.toFixed(2);
+  swipehtml =swipe.toFixed(2);
+  poshtml =pos.toFixed(2);
+
+  if (val >19.99){
+	 $('#imt2tax').html('$'+ imt2html);
+	}
+	else{
+		 $('#imt2tax').html(' - ');
+	}
+	calc_error ="";
+
+switch (true) {
+  case val ==0:
+      var transferBank =0;
+      var ImtPos = 0;
+      var posChg = 0;
+      var transferChg =0;
+      var minBalreq = 0;
+  break;
+
+
+
+  case val > 0.99 && val < 399.99:
+      var transferBank = 30 + imt2 ;
+      var ImtPos = 10 + imt2 ;
+      var posChg = 10;
+
+      var minBalreq = val.plus(posChg)
+
+      var minBalTransfer = val.plus(transferBank);
+      var minposChg = val.plus(posChg);
+      var minImtPos = val.plus(ImtPos);
+  break;
+
+ 
+
+  case val > 400 && val < 19999.99:
+        var transferBank =banktcharge + imt2;
+        var ImtPos = 0 + swipe;
+        var posChg = Number(poshtml);
+
+        var minBalreq = val.plus(posChg)
+var transferChg =banktcharge + imt2;	
+        var minBalTransfer=val.plus(transferBank);
+        var minposChg = val.plus(posChg);
+        var minImtPos = val.plus(ImtPos);
+  break;
+
+  
+  case val > 20000:
+        var calc_error ='Zipit maximum amount per transcation is $20 000, per day $100 000';
+        var ImtPos = 0;
+        var transferBank =0;
+        var posChg = "0.00";
+        var transferChg =0;
+        var minBalreq = 0;
+
+        var minBalTransfer=0;
+        var minposChg = 0;
+        var minImtPos = 0;
+  break;
+}
+
+$('#calc-error').html(calc_error);
+$('#transferBank').html('$' + transferBank.toFixed(2))
+$('#min-Balreq').html('Minimun Balance $' + minBalTransfer.toFixed(2))
+$('#min-ImtPos').html('Minimun Balance $' + minImtPos.toFixed(2))
+$('#ImtPos').html('$' + ImtPos.toFixed(2))
+$('#posChg').html(posChg)
+$('#transferChg').html(transferChg.toFixed(2))
+
+
+}
+
+$('#amount').on('input',function(){
+    calcAmt();
+    });
+
+$('#btn-calc').on('click',function(){
+    calcAmt();
+    });
+
+
+
+});
+
+
+</script>
+
+</body>
+
+
+</html>
