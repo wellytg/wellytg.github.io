@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Architecture & Governance | WellyTG</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=JetBrains+Mono:wght@400&display=swap');
+        :root {
+            --bg: #0b121f;
+            --card: #161b22;
+            --text: #c9d1d9;
+            --accent: #58a6ff;
+            --border: #30363d;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            margin: 0;
+            padding: 40px;
+            line-height: 1.6;
+        }
+        .container { max-width: 900px; margin: 0 auto; }
+        header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 40px; }
+        h1 { font-size: 2.5rem; color: var(--accent); margin: 0; }
+        h2 { font-size: 1.5rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-top: 40px; }
+        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
+        .item { background: var(--card); border: 1px solid var(--border); padding: 20px; border-radius: 8px; }
+        .tag { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-size: 0.8rem; text-transform: uppercase; }
+        .btn-back { display: inline-block; margin-bottom: 20px; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
+        code { font-family: 'JetBrains Mono', monospace; background: #21262d; padding: 2px 5px; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="btn-back">← Back to Portfolio</a>
+        <header>
+            <h1>Workspace Architecture & Governance</h1>
+            <p>A high-level overview of how my technical ecosystem is designed, managed, and secured.</p>
+        </header>
+
+        <section>
+            <h2>The Ecosystem Mapping</h2>
+            <p>My work is organized into a hierarchical structure that ensures modularity and clear domain separation.</p>
+            <div class="grid">
+                <div class="item">
+                    <div class="tag">Identity Root</div>
+                    <strong>@wellytg Profile</strong>
+                    <p>The entry point. Defines the professional persona and core mission across all platforms.</p>
+                </div>
+                <div class="item">
+                    <div class="tag">Central Hub</div>
+                    <strong>Portfolio Hub</strong>
+                    <p>A unified landing page serving as the router for all active research and production projects.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Design Principles</h2>
+            <div class="grid">
+                <div class="item">
+                    <h3>Modular Decoupling</h3>
+                    <p>Projects are built as standalone repositories. This prevents dependency hell and allows for rapid deployment of specific modules (e.g., the DigiScan engine).</p>
+                </div>
+                <div class="item">
+                    <h3>AI-Augmented Development</h3>
+                    <p>I utilize a multi-agent orchestration strategy. Specialized AI agents manage different layers of the stack—from DevOps and CI/CD to deep-dive feature engineering.</p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2>Governance & Security</h2>
+            <p>To maintain professional standards, I implement a strict <strong>Production Isolation</strong> protocol:</p>
+            <ul>
+                <li><strong>Remote Cleanliness:</strong> Public repositories contain only production-ready code and documentation.</li>
+                <li><strong>Dev-Context Privacy:</strong> Implementation details, internal process logs, and agent-specific instructions are kept in local-only git-ignored artifacts.</li>
+                <li><strong>Security Hooks:</strong> Automated pre-commit hooks scan for secrets and sensitive AI context files before every push.</li>
+            </ul>
+        </section>
+
+        <footer style="margin-top: 60px; font-size: 0.8rem; color: #8b949e; text-align: center;">
+            Built with <code>Vanilla JS</code> & <code>Multi-Agent Sync</code> · 2026
+        </footer>
+    </div>
+</body>
+</html>
