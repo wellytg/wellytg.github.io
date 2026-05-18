@@ -12,24 +12,71 @@
             --text: #c9d1d9;
             --accent: #58a6ff;
             --border: #30363d;
+            --header-h: 60px;
         }
         body {
             font-family: 'Inter', sans-serif;
             background: var(--bg);
             color: var(--text);
             margin: 0;
-            padding: 40px;
+            padding: 0;
             line-height: 1.6;
         }
-        .container { max-width: 900px; margin: 0 auto; }
-        header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 40px; }
-        h1 { font-size: 2.5rem; color: var(--accent); margin: 0; }
-        h2 { font-size: 1.5rem; border-left: 4px solid var(--accent); padding-left: 15px; margin-top: 40px; }
-        .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-top: 20px; }
-        .item { background: var(--card); border: 1px solid var(--border); padding: 20px; border-radius: 8px; }
-        .tag { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-size: 0.8rem; text-transform: uppercase; }
+        .container { max-width: 1000px; margin: 0 auto; padding: 40px 20px; }
+        
+        header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 30px; }
+        h1 { font-size: 2.2rem; color: var(--accent); margin: 0; }
+        .sub-header { color: #8b949e; font-size: 1.1rem; }
+
+        /* Tabs */
+        .tabs { display: flex; gap: 10px; border-bottom: 1px solid var(--border); margin-bottom: 30px; }
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            border: 1px solid transparent;
+            border-bottom: none;
+            border-radius: 6px 6px 0 0;
+            color: #8b949e;
+            transition: all 0.2s;
+        }
+        .tab:hover { color: var(--text); }
+        .tab.active {
+            color: var(--accent);
+            border-color: var(--border);
+            background: var(--card);
+            margin-bottom: -1px;
+            font-weight: 600;
+        }
+
+        .content-section { display: none; }
+        .content-section.active { display: block; animation: fadeIn 0.3s ease; }
+
+        @keyframes fadeIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: translateY(0); } }
+
+        .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px; }
+        .item { background: var(--card); border: 1px solid var(--border); padding: 25px; border-radius: 12px; }
+        .tag { font-family: 'JetBrains Mono', monospace; color: var(--accent); font-size: 0.75rem; text-transform: uppercase; margin-bottom: 10px; display: block; }
+        
+        h2 { font-size: 1.5rem; margin-top: 0; }
+        h3 { font-size: 1.2rem; color: var(--accent); margin-top: 0; }
+        
+        ul { padding-left: 20px; }
+        li { margin-bottom: 10px; }
+
+        code { font-family: 'JetBrains Mono', monospace; background: #21262d; padding: 2px 5px; border-radius: 4px; font-size: 0.9em; }
+        
         .btn-back { display: inline-block; margin-bottom: 20px; color: var(--accent); text-decoration: none; font-size: 0.9rem; }
-        code { font-family: 'JetBrains Mono', monospace; background: #21262d; padding: 2px 5px; border-radius: 4px; }
+        .btn-back:hover { text-decoration: underline; }
+
+        .protocol-box {
+            background: #0d1117;
+            border-left: 4px solid var(--accent);
+            padding: 20px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            border-radius: 0 8px 8px 0;
+            overflow-x: auto;
+        }
     </style>
 </head>
 <body>
@@ -37,53 +84,102 @@
         <a href="index.html" class="btn-back">← Back to Portfolio</a>
         <header>
             <h1>Workspace Architecture & Governance</h1>
-            <p>A high-level overview of how my technical ecosystem is designed, managed, and secured.</p>
+            <p class="sub-header">Technical design patterns for a multi-agent, modular technical ecosystem.</p>
         </header>
 
-        <section>
-            <h2>The Ecosystem Mapping</h2>
-            <p>My work is organized into a hierarchical structure that ensures modularity and clear domain separation.</p>
+        <nav class="tabs">
+            <div class="tab active" onclick="showTab('ecosystem')">Ecosystem Mapping</div>
+            <div class="tab" onclick="showTab('governance')">Agent Governance</div>
+            <div class="tab" onclick="showTab('security')">Security Protocols</div>
+        </nav>
+
+        <!-- TAB: Ecosystem -->
+        <section id="ecosystem" class="content-section active">
             <div class="grid">
                 <div class="item">
-                    <div class="tag">Identity Root</div>
-                    <strong>@wellytg Profile</strong>
-                    <p>The entry point. Defines the professional persona and core mission across all platforms.</p>
+                    <span class="tag">Domain: Identity Root</span>
+                    <h3>@wellytg Profile</h3>
+                    <p>The centralized entry point for my professional presence. Manages the core mission and global identity across research and production.</p>
                 </div>
                 <div class="item">
-                    <div class="tag">Central Hub</div>
-                    <strong>Portfolio Hub</strong>
-                    <p>A unified landing page serving as the router for all active research and production projects.</p>
+                    <span class="tag">Domain: Research Hub</span>
+                    <h3>The Paradox Suite</h3>
+                    <p>Home to the <strong>SOC Strategic Alignment</strong> research. Features modular simulators, data explorers, and LLM agreement dashboards.</p>
+                </div>
+                <div class="item">
+                    <span class="tag">Domain: Production</span>
+                    <h3>Flagship MVPs</h3>
+                    <p>High-impact prototypes like <strong>DigiVault</strong> and <strong>SPYN</strong>. Built using demo-driven development (DDD) and rapid sprint patterns.</p>
+                </div>
+                <div class="item">
+                    <span class="tag">Domain: Infrastructure</span>
+                    <h3>GitHub Master</h3>
+                    <p>The DevOps silo responsible for CI/CD, repository hygiene, and system-wide security hooks across 20+ repositories.</p>
                 </div>
             </div>
         </section>
 
-        <section>
-            <h2>Design Principles</h2>
+        <!-- TAB: Governance -->
+        <section id="governance" class="content-section">
+            <div class="item" style="margin-bottom: 20px;">
+                <h3>Multi-Agent Orchestration</h3>
+                <p>I utilize a specialized agent strategy to maintain high velocity without sacrificing code quality. Each agent has a defined scope and operational protocol.</p>
+            </div>
             <div class="grid">
                 <div class="item">
-                    <h3>Modular Decoupling</h3>
-                    <p>Projects are built as standalone repositories. This prevents dependency hell and allows for rapid deployment of specific modules (e.g., the DigiScan engine).</p>
+                    <span class="tag">Gemini (DevOps)</span>
+                    <p>Focused on repo management, sync status, and architectural integrity. Operates via the <code>.context.md</code> state-tracking system.</p>
                 </div>
                 <div class="item">
-                    <h3>AI-Augmented Development</h3>
-                    <p>I utilize a multi-agent orchestration strategy. Specialized AI agents manage different layers of the stack—from DevOps and CI/CD to deep-dive feature engineering.</p>
+                    <span class="tag">Claude (Engineering)</span>
+                    <p>Primary agent for deep feature implementation and technical refactoring. Operates via <code>CLAUDE.md</code> instructions.</p>
                 </div>
+            </div>
+            <div class="item" style="margin-top: 20px;">
+                <span class="tag">The Bridge Protocol</span>
+                <p>To prevent state drift between agents, a universal <code>PROJECT_STATUS.md</code> serves as the cross-agent handshake, documenting the current sprint state.</p>
             </div>
         </section>
 
-        <section>
-            <h2>Governance & Security</h2>
-            <p>To maintain professional standards, I implement a strict <strong>Production Isolation</strong> protocol:</p>
-            <ul>
-                <li><strong>Remote Cleanliness:</strong> Public repositories contain only production-ready code and documentation.</li>
-                <li><strong>Dev-Context Privacy:</strong> Implementation details, internal process logs, and agent-specific instructions are kept in local-only git-ignored artifacts.</li>
-                <li><strong>Security Hooks:</strong> Automated pre-commit hooks scan for secrets and sensitive AI context files before every push.</li>
-            </ul>
+        <!-- TAB: Security -->
+        <section id="security" class="content-section">
+            <div class="grid">
+                <div class="item">
+                    <h3>Production Isolation</h3>
+                    <p>A strict <strong>"Prod-Only"</strong> remote strategy ensures that internal development context (prompts, thinking logs, agent history) never leaks to public repositories.</p>
+                    <ul>
+                        <li>Local-only artifacts are git-ignored at the root.</li>
+                        <li>Public repos contain only production code and high-level architecture docs.</li>
+                    </ul>
+                </div>
+                <div class="item">
+                    <h3>Automated Guardrails</h3>
+                    <p>Custom pre-commit hooks are deployed system-wide to enforce security and privacy standards before any code reaches GitHub.</p>
+                    <div class="protocol-box">
+                        # Security Hook v1.2<br>
+                        IF secret_detected() OR ai_context_detected():<br>
+                        &nbsp;&nbsp;BLOCK_COMMIT()<br>
+                        &nbsp;&nbsp;ALERT_USER()
+                    </div>
+                </div>
+            </div>
         </section>
 
         <footer style="margin-top: 60px; font-size: 0.8rem; color: #8b949e; text-align: center;">
             Built with <code>Vanilla JS</code> & <code>Multi-Agent Sync</code> · 2026
         </footer>
     </div>
+
+    <script>
+        function showTab(tabId) {
+            // Update Tab UI
+            document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+            event.target.classList.add('active');
+
+            // Update Content UI
+            document.querySelectorAll('.content-section').forEach(s => s.classList.remove('active'));
+            document.getElementById(tabId).classList.add('active');
+        }
+    </script>
 </body>
 </html>
