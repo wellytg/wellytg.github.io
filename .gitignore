@@ -14,3 +14,6 @@ BRIDGE_PROTOCOL.md
 .env
 .DS_Store
 Thumbs.db
+
+# Vendor source maps (not needed in production, bloat the deploy artifact)
+vendor/**/*.map
