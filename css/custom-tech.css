@@ -246,6 +246,35 @@ footer .list-inline-item a:hover .fa-stack-1x {
 	color: var(--accent-purple) !important;
 }
 
+/* Inline SVG social icons (replaces FontAwesome fa-stack) */
+.social-badge {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	width: 2.5em;
+	height: 2.5em;
+	border-radius: 50%;
+	background-color: var(--secondary-bg);
+}
+
+.social-badge svg {
+	width: 1.1em;
+	height: 1.1em;
+	fill: var(--accent-blue);
+	transition: fill 0.3s ease;
+}
+
+.social-badge:hover svg {
+	fill: var(--accent-purple);
+}
+
+.icon-bars {
+	width: 1em;
+	height: 1em;
+	vertical-align: -0.125em;
+	fill: currentColor;
+}
+
 /* --- 7. Responsive Adjustments --- */
 @media (max-width: 768px) {
 	.masthead .page-heading h1,
