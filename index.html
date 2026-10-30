@@ -531,6 +531,23 @@
 			</div>
 		</section>
 
+		<!-- Resume Assistant (rule-based, runs in the browser; see assistant.js) -->
+		<section id="assistant" class="assistant">
+			<div class="container">
+				<h2 class="section-title">Resume Assistant</h2>
+				<div class="assistant-panel">
+					<p class="assistant-label">Resume assistant: answers only from my resume. It is rule-based, not an AI model, and nothing you type leaves this page.</p>
+					<form id="assistant-form" class="assistant-form" autocomplete="off">
+						<label for="assistant-input" class="sr-only">Ask a question about my resume</label>
+						<input type="text" id="assistant-input" class="form-control" maxlength="300" placeholder="e.g. Has Wellington led a team?" />
+						<button type="submit" class="btn btn--primary">Ask</button>
+					</form>
+					<div id="assistant-suggestions" class="assistant-suggestions" aria-label="Suggested questions"></div>
+					<div id="assistant-answer" class="assistant-answer" aria-live="polite"></div>
+				</div>
+			</div>
+		</section>
+
 		<!-- Contact Section -->
 		<!-- MUTED 2026-08-18: entire Get In Touch section hidden during exposure-reduction pass. -->
 <!--
@@ -583,6 +600,7 @@
 		</footer>
 
 		<script src="app.js"></script>
+		<script src="assistant.js"></script>
 		<script>
 			var requestCvBtn = document.getElementById('request-cv-btn');
 			if (requestCvBtn) {
