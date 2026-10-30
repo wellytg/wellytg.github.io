@@ -1,0 +1,2 @@
+# Keep binary assets byte-for-byte (core.autocrlf is on for this clone)
+*.pdf binary

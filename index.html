@@ -33,6 +33,7 @@
 				<ul class="nav-menu" id="nav-menu">
 					<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
+					<li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
 					<li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
 					<li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
 					<li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
@@ -61,6 +62,7 @@
 					<p class="hero-subtitle">I research why SOCs fail — and then build the systems that make them work.</p>
 					<div class="hero-buttons">
 						<a href="#research" class="btn btn--primary">View Research</a>
+						<a href="assets/Wellington_Gwavava_Resume.pdf" class="btn btn--outline" download>Download Resume (PDF)</a>
 						<!-- MUTED 2026-08-18: hero Request CV / Contact Me buttons hidden for hero redesign. -->
 <!--
 <a href="#" aria-disabled="true" data-muted="contact-section" id="request-cv-btn" class="btn btn--outline">Request CV</a>
@@ -129,6 +131,63 @@
 						</div>
 					</div>
 				</div>
+			</div>
+		</section>
+
+		<!-- Experience Section (wording from the October 2026 web resume) -->
+		<section id="experience" class="experience">
+			<div class="container">
+				<h2 class="section-title">Experience</h2>
+				<div class="experience-list">
+					<div class="experience-item">
+						<div class="experience-header">
+							<h3>SOC Research Externship (Part-time) <span class="experience-org">| The University of Tulsa</span></h3>
+							<p class="years">Aug 2025 - Present</p>
+						</div>
+						<p class="experience-sub">Tulsa, OK | Applied operational SOC fieldwork</p>
+						<ul>
+							<li>Investigate security events in a live university SOC and evaluate how well AI-augmented detection workflows support alert triage; track US-CERT and vendor advisories for situational awareness.</li>
+							<li>Apply doctoral research on CISO-analyst strategic alignment in a live SOC environment.</li>
+						</ul>
+					</div>
+					<div class="experience-item">
+						<div class="experience-header">
+							<h3>Security Operations Center Analyst <span class="experience-org">| The University of Tulsa</span></h3>
+							<p class="years">May 2025 - Aug 2025</p>
+						</div>
+						<p class="experience-sub">Tulsa, OK | Full-time SOC internship</p>
+						<ul>
+							<li>Delivered the full CISA LME stack in an operational SOC; the deployment was adopted as the SOC's operational standard. Wrote Python automation for multi-source log ingestion and configured Cribl Stream pipelines for routing, enrichment, and normalization across Windows and Linux endpoints.</li>
+							<li>Built custom Elastic Stack dashboards for lateral movement and credential dumping detection, fed by Wazuh HIDS/EDR and Elastic Agent endpoint telemetry; worked with SentinelOne and Varonis for endpoint and data security coverage.</li>
+							<li>Validated detection rules against MITRE ATT&amp;CK and MITRE D3FEND; set success criteria before deployment, automated repeatable security reporting in Python, and presented quantified findings to the CISO and SOC leadership.</li>
+							<li>Authored deployment documentation, including installation guides, field dictionaries, and operational runbooks.</li>
+						</ul>
+					</div>
+					<div class="experience-item">
+						<div class="experience-header">
+							<h3>Graduate Research Assistant and TU Cyber Fellow <span class="experience-org">| The University of Tulsa</span></h3>
+							<p class="years">Aug 2023 - Present</p>
+						</div>
+						<p class="experience-sub">Tulsa, OK</p>
+						<ul>
+							<li>Doctoral research on SOC goal incongruency, designing quantitative metrics that separate risk mitigated from activity volume. Dissertation adviser: Tyler Moore. Expected completion: May 2027.</li>
+							<li>Reached greater than 85 percent cross-model agreement with SOC-Job-Task-Analyzer, an agentic LLM pipeline that extracts and classifies SOC analyst task duties from 49 job descriptions, with human-in-the-loop validation.</li>
+							<li>Published two peer-reviewed papers with Andrew Morin (Idaho National Labs) at Pre-ICIS/WISP 2025 and WOSOC/NDSS Symposium 2025; presented research at TU Research Day 2026.</li>
+						</ul>
+					</div>
+					<div class="experience-item">
+						<div class="experience-header">
+							<h3>Acting Department Chairperson and Lecturer <span class="experience-org">| Harare Institute of Technology</span></h3>
+							<p class="years">2012 - 2023</p>
+						</div>
+						<p class="experience-sub">Zimbabwe | Department of Computer Science, progression from Teaching Assistant through Chairperson</p>
+						<ul>
+							<li>Developed and delivered course materials for 18 subjects, including AI and Expert Systems, Neural Networks and Pattern Matching, Smartcard Cryptosystems, and Mobile Computing and Wireless Networks; supervised 2 MTech and 15 BTech research projects.</li>
+							<li>As chair managing 10 faculty, launched 3 new degree programs (1 BTech, 2 MTech), digitized approximately 70 percent of departmental SOPs, and established an Industry Advisory Board of 8 experts.</li>
+						</ul>
+					</div>
+				</div>
+				<p class="experience-download"><a href="assets/Wellington_Gwavava_Resume.pdf" class="btn btn--outline btn--sm" download>Download the full resume (PDF)</a></p>
 			</div>
 		</section>
 
@@ -247,6 +306,20 @@
 					</div>
 
 					<div class="project-card">
+						<h3>SOC-Job-Task-Analyzer</h3>
+						<p>Agentic LLM pipeline that extracts and classifies SOC analyst task duties from 49 job descriptions, with human-in-the-loop validation. Reached greater than 85 percent cross-model agreement as part of doctoral research on SOC goal incongruency.</p>
+						<div class="project-tech">
+							<span class="tech-tag">Agentic LLM Pipeline</span>
+							<span class="tech-tag">Cross-Model Validation</span>
+							<span class="tech-tag">Human-in-the-Loop</span>
+						</div>
+						<div class="project-links">
+							<a href="https://github.com/wellytg/SOC-Job-Task-Analyzer" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a>
+						</div>
+						<div class="project-status"><span class="status status--info">PhD Research</span></div>
+					</div>
+
+					<div class="project-card">
 						<h3>SPYN — Smart People You Need</h3>
 						<p>Talent-matching MVP for Hurricane Pitch competition — connecting people to the right professionals on demand.</p>
 						<div class="project-tech">
@@ -273,6 +346,21 @@
 							<a href="https://rise-up-launchpad.lovable.app/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Live Site</a>
 						</div>
 						<div class="project-status"><span class="status status--success">1st Place</span></div>
+					</div>
+
+					<div class="project-card">
+						<h3>Sensei — Multi-Agent AI Coaching Platform</h3>
+						<p>Built and deployed a multi-agent AI coaching app in 22 hours as part of a 4-person team at Hacklahoma 2026 (Feb 2026), using Claude Sonnet API (Coach and Reflection agents with tool-use loops), TanStack Start, Cloudflare Workers, D1/SQLite, Drizzle ORM, Google Calendar API, and Google OAuth.</p>
+						<div class="project-tech">
+							<span class="tech-tag">Claude Sonnet API</span>
+							<span class="tech-tag">TanStack Start</span>
+							<span class="tech-tag">Cloudflare Workers</span>
+							<span class="tech-tag">D1/SQLite</span>
+						</div>
+						<div class="project-links">
+							<a href="https://devpost.com/software/project-sensei" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Devpost</a>
+						</div>
+						<div class="project-status"><span class="status status--info">Hacklahoma 2026</span></div>
 					</div>
 
 					<div class="project-card">
@@ -358,8 +446,22 @@
 							<div class="skill-item">Elastic Agent</div>
 							<div class="skill-item">CISA LME</div>
 							<div class="skill-item">MITRE ATT&amp;CK</div>
+							<div class="skill-item">MITRE D3FEND</div>
 							<div class="skill-item">NIST CSF</div>
+							<div class="skill-item">CIS Controls</div>
+							<div class="skill-item">SentinelOne (hands-on)</div>
+							<div class="skill-item">Varonis (hands-on)</div>
+							<div class="skill-item">Splunk (workshop-level)</div>
 							<div class="skill-item">AWS Cloud Foundations</div>
+						</div>
+					</div>
+					<div class="skills-category">
+						<h3>AI Security &amp; Agentic Systems</h3>
+						<div class="skills-list">
+							<div class="skill-item">Multi-agent AI architecture (Claude API)</div>
+							<div class="skill-item">Local LLMs: Ollama, DeepSeek-R1, Llama</div>
+							<div class="skill-item">LangChain (workshop-level, NVIDIA DLI)</div>
+							<div class="skill-item">MCP (Model Context Protocol)</div>
 						</div>
 					</div>
 					<div class="skills-category">
@@ -378,10 +480,13 @@
 					<div class="skills-category">
 						<h3>Certifications</h3>
 						<div class="certifications-list">
-							<div class="cert-item"><h4>ISC2 Certified in Cybersecurity (CC)</h4></div>
+							<div class="cert-item"><h4>ISC2 Certified in Cybersecurity (CC), active through Aug 2028</h4></div>
 							<div class="cert-item"><h4>Cribl Certified Admin — Stream (Level 2)</h4></div>
 							<div class="cert-item"><h4>Cribl Certified User (Level 1)</h4></div>
 							<div class="cert-item"><h4>Google Cybersecurity Professional Certificate V2</h4></div>
+							<div class="cert-item"><h4>Google AI Professional Certificate (Jul 2026)</h4></div>
+							<div class="cert-item"><h4>AI for App Deployment, Google (Aug 2026)</h4></div>
+							<div class="cert-item"><h4>Building LLM Applications With Prompt Engineering, NVIDIA Deep Learning Institute (Sep 2026)</h4></div>
 						</div>
 						<h3 class="training-heading">Training</h3>
 						<div class="certifications-list">
