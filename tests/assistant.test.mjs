@@ -26,7 +26,7 @@ function check(name, fn) {
 
 const supported = [
 	{ q: 'Has Wellington led a team?', expect: ['Acting Department Chairperson', '10 faculty', '3 new degree programs'] },
-	{ q: 'Leadership experience', expect: ['10 faculty', 'Industry Advisory Board of 8 experts', 'Secretary, ISC2 Tulsa Metro Chapter'] },
+	{ q: 'Leadership experience', expect: ['two years (Jul 2021 - Jul 2023)', '10 faculty', 'Industry Advisory Board of 8 experts', 'Secretary, ISC2 Tulsa Metro Chapter'] },
 	{ q: 'Why is Wellington a fit for a detection engineering role?', expect: ['CISA Logging Made Easy', 'adopted as the operational standard', 'MITRE ATT&CK', 'MITRE D3FEND', 'lateral movement and credential dumping'] },
 	{ q: "What are Wellington's skills in detection engineering?", expect: ['Detection engineering and alerting workflows', 'threat hunting', 'MITRE D3FEND', 'Wazuh'] },
 	{ q: 'What did Wellington do at Harare Institute of Technology?', expect: ['Harare Institute of Technology', '18 subjects', '10 faculty', '2 MTech and 15 BTech'] }
@@ -94,6 +94,10 @@ check('unshaped topic word alone does not trigger an answer', () => {
 
 check('no fact contains a phone number or street address', () => {
 	for (const t of allFactText) assert.ok(!PHONE.test(t) && !STREET.test(t), t);
+});
+
+check('no fact claims 11+ years of leadership or experience', () => {
+	for (const t of allFactText) assert.ok(!/\b11\+|\b(?:11|eleven) years\b/i.test(t), t);
 });
 
 check('every source link is the resume PDF or an in-page anchor', () => {

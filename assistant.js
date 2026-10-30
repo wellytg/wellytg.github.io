@@ -98,7 +98,7 @@
 			text: experience.filter(function (e) { return e.org === 'tu'; }).map(function (e) { return e.text; }).join('\n\n'),
 			matches: [/\b(?:university of tulsa|tu)\b/i] },
 		{ id: 'leadership', title: 'Leadership', anchor: '#experience',
-			text: 'As Acting Department Chairperson at Harare Institute of Technology, managed 10 faculty, launched 3 new degree programs (1 BTech, 2 MTech), digitized approximately 70 percent of departmental SOPs, and established an Industry Advisory Board of 8 experts; supervised 2 MTech and 15 BTech research projects. Secretary, ISC2 Tulsa Metro Chapter.',
+			text: 'As Acting Department Chairperson at Harare Institute of Technology for two years (Jul 2021 - Jul 2023), managed 10 faculty, launched 3 new degree programs (1 BTech, 2 MTech), digitized approximately 70 percent of departmental SOPs, and established an Industry Advisory Board of 8 experts; supervised 2 MTech and 15 BTech research projects. Secretary, ISC2 Tulsa Metro Chapter.',
 			matches: [/\bleadership\b/i, /\b(?:led|lead|leads|leading)\b/i, /\bteams?\b/i, /\bmanag(?:e[ds]?|ing|er)\b/i, /\bchair(?:person)?\b/i, /\bsecretary\b/i, /\bsupervis\w*\b/i] }
 	]);
 
