@@ -53,7 +53,7 @@ function initMobileMenu() {
 
 // Smooth Scrolling Navigation
 function initSmoothScrolling() {
-    const navLinks = document.querySelectorAll('.nav-link, .hero-buttons a[href^="#"]');
+    const navLinks = document.querySelectorAll('.nav-link[href^="#"]:not([href="#"]), .hero-buttons a[href^="#"]:not([href="#"])');
     
     navLinks.forEach(link => {
         link.addEventListener('click', function(e) {
