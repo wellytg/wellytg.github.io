@@ -38,7 +38,7 @@
 					<li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
 					<li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
 					<li class="nav-item"><a href="#community" class="nav-link">Community</a></li>
-					<li class="nav-item"><a href="#" aria-disabled="true" data-muted="contact-section" class="nav-link">Contact</a></li>
+					<li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
 					<li class="nav-item"><a href="architecture.html" class="nav-link">Architecture</a></li>
 				</ul>
 				<div class="nav-toggle" id="mobile-menu">
@@ -63,10 +63,10 @@
 					<div class="hero-buttons">
 						<a href="#research" class="btn btn--primary">View Research</a>
 						<a href="assets/Wellington_Gwavava_Resume.pdf" class="btn btn--outline" download>Download Resume (PDF)</a>
-						<!-- MUTED 2026-08-18: hero Request CV / Contact Me buttons hidden for hero redesign. -->
+						<a href="#contact" class="btn btn--outline">Contact Me</a>
+						<!-- MUTED 2026-08-18: hero Request CV button stays hidden (the contact form it fills is still muted). -->
 <!--
 <a href="#" aria-disabled="true" data-muted="contact-section" id="request-cv-btn" class="btn btn--outline">Request CV</a>
-						<a href="#" aria-disabled="true" data-muted="contact-section" class="btn btn--outline">Contact Me</a>
 -->
 					</div>
 					<!-- MUTED 2026-08-18: hero social-links row hidden for hero redesign. -->
@@ -549,23 +549,22 @@
 		</section>
 
 		<!-- Contact Section -->
-		<!-- MUTED 2026-08-18: entire Get In Touch section hidden during exposure-reduction pass. -->
-<!--
-<section id="contact" class="contact">
+		<!-- RESTORED 2026-10-30 (Will): email, LinkedIn, GitHub and Credly are public again. Location and the contact form stay muted. -->
+		<section id="contact" class="contact">
 			<div class="container">
 				<h2 class="section-title">Get In Touch</h2>
-				<div class="contact-content">
+				<div class="contact-content contact-content--single">
 					<div class="contact-info">
 						<h3>Contact Information</h3>
-						<div class="contact-item" style="margin-bottom: var(--space-16); color: var(--cyber-text-muted); font-style: italic; font-size: var(--font-size-sm);">To request a copy of my CV, use the form with subject "CV Request".</div>
-						<div class="contact-item"><strong>University:</strong> wellington-gwavava@utulsa.edu</div>
-						<div class="contact-item"><strong>Location:</strong> Tulsa area</div>
+						<div class="contact-item"><strong>Email:</strong> <a href="mailto:wellington-gwavava@utulsa.edu">wellington-gwavava@utulsa.edu</a></div>
+						<!-- MUTED 2026-08-18 (kept muted 2026-10-30): <div class="contact-item"><strong>Location:</strong> Tulsa area</div> -->
 						<div class="social-links-contact">
-							<a href="#" aria-disabled="true" data-muted="wellytg-personal-linkedin" target="_blank" class="btn btn--outline">LinkedIn</a>
-							<a href="#" aria-disabled="true" data-muted="wellytg-personal-github" target="_blank" class="btn btn--outline">GitHub</a>
-							<a href="#" aria-disabled="true" data-muted="wellytg-credly" target="_blank" class="btn btn--outline">Credly</a>
+							<a href="https://www.linkedin.com/in/wellingtongwavava" target="_blank" rel="noopener noreferrer" class="btn btn--outline">LinkedIn</a>
+							<a href="https://github.com/wellytg" target="_blank" rel="noopener noreferrer" class="btn btn--outline">GitHub</a>
+							<a href="https://www.credly.com/users/wellington-gwavava/badges" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Credly</a>
 						</div>
 					</div>
+					<!-- MUTED 2026-08-18 (kept muted 2026-10-30): contact form.
 					<div class="contact-form-container">
 						<form class="contact-form" id="contact-form">
 							<div class="form-group">
@@ -587,10 +586,10 @@
 							<button type="submit" class="btn btn--primary btn--full-width">Send Message</button>
 						</form>
 					</div>
+					-->
 				</div>
 			</div>
 		</section>
--->
 
 		<!-- Footer -->
 		<footer class="footer">
