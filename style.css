@@ -1477,3 +1477,8 @@ section {
   gap: var(--space-8);
   margin-bottom: var(--space-16);
 }
+
+/* Content refresh 2026-10: training sub-heading under certifications */
+.skills-category h3.training-heading {
+  margin-top: var(--space-24);
+}
