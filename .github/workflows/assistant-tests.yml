@@ -1,0 +1,31 @@
+# Runs the resume assistant tests (plain Node, no dependencies, no network).
+# The register trace test skips here: the skills register is private and not in this repo.
+name: Assistant tests
+
+on:
+  push:
+    paths:
+      - 'assistant.js'
+      - 'tests/**'
+      - 'index.html'
+      - '.github/workflows/assistant-tests.yml'
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+      - name: Assistant tests
+        run: node tests/assistant.test.mjs
+      - name: Register trace (skips without REGISTER_PATH)
+        run: node tests/register_trace.test.mjs

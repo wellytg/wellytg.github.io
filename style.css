@@ -1602,6 +1602,41 @@ section {
   text-decoration: none;
 }
 
+/* Assistant v2 (2026-11): conversation turns and follow-up chips */
+.assistant-turn {
+  padding: var(--space-16) 0;
+  border-top: 1px solid rgba(0, 217, 255, 0.12);
+}
+
+.assistant-turn:first-child {
+  border-top: none;
+  padding-top: 0;
+}
+
+.assistant-q {
+  color: var(--cyber-blue);
+  font-weight: 600;
+  margin-bottom: var(--space-8);
+}
+
+.assistant-q::before {
+  content: "Q: ";
+  color: var(--cyber-text-muted);
+  font-weight: 400;
+}
+
+.assistant-sources .assistant-sources-label {
+  margin: 0;
+  align-self: center;
+}
+
+.assistant-followups {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-8);
+  margin-top: var(--space-12);
+}
+
 @media (max-width: 600px) {
   .assistant-form {
     flex-direction: column;
