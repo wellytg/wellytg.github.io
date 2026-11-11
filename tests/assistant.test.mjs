@@ -58,6 +58,11 @@ const supported = [
 	// Location (Will, 2026-11-10: answer as Tulsa, OK)
 	{ q: 'Where is he located?', topic: 'location', expect: ['Tulsa, OK'] },
 	{ q: 'Where does Wellington live?', topic: 'location', expect: ['Tulsa, OK'] },
+	// Meta hackathon (Will, 2026-11-11: agreed wording, public repo link)
+	{ q: 'Tell me about Shadowfenced', topic: 'shadowfenced', expect: ['Meta Global AI Developer Hackathon (Indie track), 2026: built Shadowfenced, covert-egress detection for AI coding agents.', 'github.com/wellytg/meta-hackathon-shadowfenced'] },
+	{ q: 'What did he build at the Meta hackathon?', topic: 'shadowfenced', expect: ['Shadowfenced'] },
+	{ q: 'What did he build at Hacklahoma?', topic: 'sensei', expect: ['Sensei'] },
+	{ q: 'What projects has he built?', topic: 'projects', expect: ['Shadowfenced', 'Sensei'] },
 	// Soft skills from resume evidence
 	{ q: 'Is he a good communicator?', topic: 'communication', expect: ['CISO and SOC leadership', '18 subjects'] },
 	{ q: 'Is he a team player?', topic: 'teamwork', expect: ['4-person team'] },
@@ -259,8 +264,16 @@ check('no fact claims 11+ years or a total years-of-experience figure', () => {
 	for (const t of allFactText) assert.ok(!/\b11\+|\b(?:10|11|eleven|ten) years\b|\bdecade\b/i.test(t), t);
 });
 
-check('no fact names held or private items (TRIPWIRE, application log, prices)', () => {
-	for (const t of allFactText) assert.ok(!/tripwire|shadowfenced|bytedance|tiktok|\$\s?\d|salary range/i.test(t), t);
+// Shadowfenced was held until Will approved public wording on 2026-11-11; its old
+// working name stays banned.
+check('no fact names held or private items (old project name, application log, prices)', () => {
+	for (const t of allFactText) assert.ok(!/tripwire|bytedance|tiktok|\$\s?\d|salary range/i.test(t), t);
+});
+
+check('hackathon facts state no competition result', () => {
+	const hackathonText = allFactText.filter((t) => /shadowfenced|meta global ai/i.test(t));
+	assert.ok(hackathonText.length >= 2, 'hackathon facts missing');
+	for (const t of hackathonText) assert.ok(!/finalist|\bfinals?\b|winner|\bwon\b|runner.?up|\bplaced\b|\bplace\b|\bprize\b|\baward/i.test(t), t);
 });
 
 check('do-not-claim items are never stated as experience', () => {
