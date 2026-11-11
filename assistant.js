@@ -288,20 +288,20 @@
 			keys: [['project', 4], ['portfolio', 4], ['hackathon', 3], ['built', 3], ['build', 2], ['side project', 4], ['repo', 2], ['made', 1]],
 			examples: ['what projects has he built', 'what ai projects has he built', 'show me his portfolio', 'list his projects'],
 			say: [
-				'His main projects:\n- CISA LME operational SOC deployment (adopted as the SOC standard)\n- SOC-Job-Task-Analyzer: agentic LLM pipeline, greater than 85 percent cross-model agreement on 49 job descriptions\n- Shadowfenced: covert-egress detection for AI coding agents (Meta Global AI Developer Hackathon, Indie track, 2026)\n- Sensei: multi-agent AI coaching app, built in 22 hours at Hacklahoma 2026\n- DigiVault: automated OSINT and breach analysis (Hurricane Hackathon 2026)\n- SOC Strategic Alignment Simulator and GCM Explorer (PhD research)',
-				'The AI-heavy ones are SOC-Job-Task-Analyzer (an agentic LLM research pipeline), Shadowfenced (covert-egress detection for AI coding agents, built at the Meta Global AI Developer Hackathon in 2026), Sensei (a two-agent Claude API app shipped in 22 hours) and DigiVault (OSINT exposure scoring with Claude-powered recommendations). On the operations side, the CISA LME deployment; on the research side, the SOC Strategic Alignment Simulator.'
+				'His main projects:\n- CISA LME operational SOC deployment (adopted as the SOC standard)\n- SOC-Job-Task-Analyzer: agentic LLM pipeline, greater than 85 percent cross-model agreement on 49 job descriptions\n- Shadowfenced: local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents (designed and directed; Meta Global AI Developer Hackathon, Indie track, 2026)\n- Sensei: multi-agent AI coaching app, built in 22 hours at Hacklahoma 2026\n- DigiVault: automated OSINT and breach analysis (Hurricane Hackathon 2026)\n- SOC Strategic Alignment Simulator and GCM Explorer (PhD research)',
+				'The AI-heavy ones are SOC-Job-Task-Analyzer (an agentic LLM research pipeline), Shadowfenced (a local AI egress guard he designed and directed at the Meta Global AI Developer Hackathon in 2026), Sensei (a two-agent Claude API app shipped in 22 hours) and DigiVault (OSINT exposure scoring with Claude-powered recommendations). On the operations side, the CISA LME deployment; on the research side, the SOC Strategic Alignment Simulator.'
 			],
 			next: ['Tell me about Shadowfenced', 'Tell me about Sensei', 'Tell me about SOC-Job-Task-Analyzer'],
 			refs: ['projects:CISA Logging Made Easy', 'projects:SOC-Job-Task-Analyzer', 'projects:Agent Egress Monitor', 'projects:Sensei', 'projects:DigiVault', 'projects:SOC Strategic Alignment Simulator'] },
 
-		// Wording agreed by Will 2026-11-11. The register (v2_24) still lists this project under its
+		// Final wording agreed by Will 2026-11-11 (round 2: "designed and directed", local AI egress guard). The register (v2_24) still lists this project under its
 		// pre-submission working name, so the ref matches on the descriptive part of that name only.
 		{ id: 'shadowfenced', kind: 'fact', title: 'Shadowfenced (Meta Global AI Developer Hackathon 2026)', anchor: '#projects', onResume: false,
-			keys: [['shadowfenced', 7], ['shadow fenced', 7], ['meta', 5], ['meta hackathon', 7], ['egress', 6], ['covert', 5], ['exfiltration', 4], ['coding agent', 5], ['indie', 3]],
+			keys: [['shadowfenced', 7], ['shadow fenced', 7], ['meta', 5], ['meta hackathon', 7], ['egress', 6], ['covert', 5], ['exfiltration', 4], ['coding agent', 5], ['egress guard', 7], ['personal data', 3], ['indie', 3]],
 			examples: ['tell me about shadowfenced', 'what did he build at the meta hackathon', 'what is his ai agent egress project'],
 			say: [
-				'Meta Global AI Developer Hackathon (Indie track), 2026: built Shadowfenced, covert-egress detection for AI coding agents. The code is public on GitHub: github.com/wellytg/meta-hackathon-shadowfenced',
-				'Shadowfenced is his entry for the Meta Global AI Developer Hackathon (Indie track) in 2026: covert-egress detection for AI coding agents. Code: github.com/wellytg/meta-hackathon-shadowfenced'
+				'Meta Global AI Developer Hackathon (Indie track), 2026: designed and directed Shadowfenced, a local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents. The code is public on GitHub: github.com/wellytg/meta-hackathon-shadowfenced',
+				'Shadowfenced is his entry for the Meta Global AI Developer Hackathon (Indie track) in 2026, which he designed and directed: a local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents. Code: github.com/wellytg/meta-hackathon-shadowfenced'
 			],
 			next: ['What AI skills does he have?', 'What projects has he built?'],
 			refs: ['projects:Agent Egress Monitor', 'skills.cybersecurity_direct:AI Security'] },

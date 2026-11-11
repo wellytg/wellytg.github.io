@@ -59,7 +59,7 @@ const supported = [
 	{ q: 'Where is he located?', topic: 'location', expect: ['Tulsa, OK'] },
 	{ q: 'Where does Wellington live?', topic: 'location', expect: ['Tulsa, OK'] },
 	// Meta hackathon (Will, 2026-11-11: agreed wording, public repo link)
-	{ q: 'Tell me about Shadowfenced', topic: 'shadowfenced', expect: ['Meta Global AI Developer Hackathon (Indie track), 2026: built Shadowfenced, covert-egress detection for AI coding agents.', 'github.com/wellytg/meta-hackathon-shadowfenced'] },
+	{ q: 'Tell me about Shadowfenced', topic: 'shadowfenced', expect: ['Meta Global AI Developer Hackathon (Indie track), 2026: designed and directed Shadowfenced, a local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents.', 'github.com/wellytg/meta-hackathon-shadowfenced'] },
 	{ q: 'What did he build at the Meta hackathon?', topic: 'shadowfenced', expect: ['Shadowfenced'] },
 	{ q: 'What did he build at Hacklahoma?', topic: 'sensei', expect: ['Sensei'] },
 	{ q: 'What projects has he built?', topic: 'projects', expect: ['Shadowfenced', 'Sensei'] },
@@ -274,6 +274,22 @@ check('hackathon facts state no competition result', () => {
 	const hackathonText = allFactText.filter((t) => /shadowfenced|meta global ai/i.test(t));
 	assert.ok(hackathonText.length >= 2, 'hackathon facts missing');
 	for (const t of hackathonText) assert.ok(!/finalist|\bfinals?\b|winner|\bwon\b|runner.?up|\bplaced\b|\bplace\b|\bprize\b|\baward/i.test(t), t);
+});
+
+// Final wording (Will, 2026-11-11 round 2): he designed and directed the build, and
+// the product is a local AI egress guard. Checked per sentence or bullet, because
+// shared answers also describe other projects (e.g. Sensei "built in 22 hours").
+check('hackathon wording says designed and directed, never "built" or "covert-egress"', () => {
+	const pieces = allFactText.flatMap((t) => t.split(/\n|(?<=\.)\s+/)).filter((p) => /shadowfenced|meta global ai/i.test(p));
+	assert.ok(pieces.length >= 4, 'hackathon sentences missing');
+	for (const p of pieces) assert.ok(!/\bbuilt\b|\bbuild\b|covert.?egress/i.test(p), p);
+	assert.ok(allFactText.some((t) => t.includes('Meta Global AI Developer Hackathon (Indie track), 2026: designed and directed Shadowfenced, a local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents.')), 'final line missing');
+});
+
+check('site HTML uses the final hackathon wording only', () => {
+	const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+	assert.ok(html.includes('designed and directed Shadowfenced, a local AI egress guard'), 'final line missing from index.html');
+	assert.ok(!/built Shadowfenced|covert.?egress|tripwire/i.test(html), 'old wording in index.html');
 });
 
 check('do-not-claim items are never stated as experience', () => {
