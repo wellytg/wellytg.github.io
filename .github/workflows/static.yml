@@ -1,9 +1,13 @@
 # Simple workflow for deploying static content to GitHub Pages
 name: Deploy static content to Pages
 
+# The site's default branch is master (2026-11-11 fix: the trigger named "main",
+# which does not exist, so this workflow never ran). It deploys only when
+# Settings > Pages > Source is "GitHub Actions"; with "Deploy from a branch" the
+# built-in "pages build and deployment" run publishes the site instead.
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
   workflow_dispatch:
 
 permissions:
