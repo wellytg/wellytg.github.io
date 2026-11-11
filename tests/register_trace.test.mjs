@@ -1,7 +1,7 @@
 // Local-only grounding check: every `refs` entry in assistant.js must exist in
 // the canonical skills register. The register is private and lives outside
 // this repo, so this test SKIPS (exit 0) unless REGISTER_PATH points at it:
-//   REGISTER_PATH=/path/to/master_skill_register_v2_24.json node tests/register_trace.test.mjs
+//   REGISTER_PATH=/path/to/master_skill_register_v2_25.json node tests/register_trace.test.mjs
 import { createRequire } from 'node:module';
 import { readFileSync, existsSync } from 'node:fs';
 
