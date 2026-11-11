@@ -192,9 +192,10 @@
 			keys: [['detection', 5], ['detect', 4], ['detection engineering', 6], ['rule', 2], ['alerting', 3], ['use case', 3], ['lateral movement', 4], ['credential dumping', 4]],
 			examples: ['what are his skills in detection engineering', 'does he write detection rules', 'what detection work has he done'],
 			say: [
-				[SKILLS_DETECTION, SKILLS_SIEM, 'In practice (SOC Analyst, May 2025 - Aug 2025): built custom Elastic Stack dashboards for lateral movement and credential dumping detection, fed by Wazuh HIDS/EDR and Elastic Agent endpoint telemetry, and validated detection rules against MITRE ATT&CK and MITRE D3FEND.'].join('\n'),
+				'Detection engineering and alerting workflows are the core of his SOC work. As SOC Analyst (May 2025 - Aug 2025) he built Elastic Stack dashboards for lateral movement and credential dumping detection, fed by Wazuh HIDS/EDR and Elastic Agent telemetry, and validated the rules against MITRE ATT&CK and MITRE D3FEND. Around that sit log enrichment with Cribl Stream, threat hunting and incident triage.',
 				'Detection engineering is the core of his SOC work. During the CISA LME deployment he built Elastic Stack dashboards for lateral movement and credential dumping detection, fed by Wazuh HIDS/EDR and Elastic Agent telemetry, configured alerting workflows, and validated the detection rules against MITRE ATT&CK and MITRE D3FEND. Upstream, he handles multi-source log integration, enrichment and normalization with Cribl Stream; around it, threat hunting and incident triage.'
 			],
+			more: [SKILLS_DETECTION, SKILLS_SIEM].join('\n\n'),
 			next: ['What SIEM tools has he used?', 'Does he do threat hunting?', 'Which frameworks does he use?'],
 			refs: ['skills.cybersecurity_direct:Detection Engineering', 'skills.cybersecurity_direct:Lateral Movement and Credential Dumping Detection', 'skills.cybersecurity_direct:MITRE D3FEND'] },
 
@@ -202,9 +203,10 @@
 			keys: [['siem', 5], ['elastic', 4], ['elk', 4], ['kibana', 4], ['cribl', 5], ['wazuh', 5], ['elastic agent', 4], ['sentinelone', 5], ['varonis', 5], ['defender', 4], ['edr', 4], ['xdr', 4], ['tool', 2], ['stack', 2], ['log', 2], ['pipeline', 2]],
 			examples: ['what siem tools has he used', 'does he know elastic', 'what security tools does he use', 'experience with wazuh'],
 			say: [
-				SKILLS_SIEM,
+				'His core stack is the CISA LME deployment he delivered: Elastic Stack (ELK), Cribl Stream pipelines (Cribl Certified Admin, Level 2) and Wazuh HIDS/EDR. He has also worked hands-on with SentinelOne and Varonis, and maps his work to MITRE ATT&CK, MITRE D3FEND, NIST CSF and CIS Controls. Splunk is workshop-level.',
 				'His hands-on stack: Elastic Stack (ELK) with Cribl Stream pipelines (he is a Cribl Certified Admin, Level 2), Wazuh HIDS/EDR and Elastic Agent for endpoint telemetry, all inside the CISA LME deployment he delivered. He has also worked hands-on with SentinelOne and Varonis, and ran Microsoft 365 Defender as a parallel test system alongside the production Wazuh/LME deployment. Splunk is workshop-level.'
 			],
+			more: SKILLS_SIEM,
 			next: ['Why is he a fit for detection engineering?', 'Does he know Splunk?', 'Does he have Microsoft Sentinel experience?'],
 			refs: ['skills.cybersecurity_direct:Cribl Stream', 'skills.cybersecurity_direct:Elastic Stack', 'skills.cybersecurity_direct:Wazuh', 'skills.cybersecurity_direct:SentinelOne', 'skills.cybersecurity_direct:Varonis', 'skills.cybersecurity_direct:Microsoft 365 Defender'] },
 
@@ -253,10 +255,11 @@
 			keys: [['ai', 4], ['artificial intelligence', 5], ['llm', 5], ['agentic', 5], ['agent', 3], ['claude', 4], ['mcp', 5], ['model context protocol', 5], ['langchain', 5], ['prompt', 3], ['prompt engineering', 5], ['ollama', 5], ['genai', 5], ['generative', 3], ['machine learning', 4], ['ml', 3], ['ai security', 6], ['nvidia', 3]],
 			examples: ['what ai skills does he have', 'does he work with llms', 'what agentic ai experience does he have', 'does he know mcp'],
 			say: [
-				SKILLS_AI,
+				'He builds agentic AI and studies how it fails. On the building side: multi-agent apps on the Claude API, MCP, local models through Ollama (DeepSeek-R1, Llama) and LangChain at workshop level (NVIDIA DLI). On the security side: failure-mode analysis of agentic workflows, prompt engineering for security use cases, and audit trail and state verification design for agentic actions.',
 				'He builds agentic AI for security work. Highlights: SOC-Job-Task-Analyzer, an agentic LLM pipeline with greater than 85 percent cross-model agreement across 49 SOC job descriptions; Sensei, a two-agent Claude API app (Coach and Reflection agents with tool-use loops) built in 22 hours at Hacklahoma 2026; local LLM deployment with Ollama, DeepSeek-R1 and Llama; MCP; and LangChain chains and tool-using agents from NVIDIA DLI training (Sep 2026).',
 				'On the AI security side he focuses on how agents fail: agentic workflow analysis and failure-mode characterization, AI feedback loop design, and audit trail and state verification design for agentic actions. On the building side: the Claude API, MCP, LangChain and local models through Ollama.'
 			],
+			more: SKILLS_AI,
 			next: ['Tell me about Sensei', 'Tell me about SOC-Job-Task-Analyzer', 'Does he know RAG?'],
 			refs: ['skills.technical:Multi-agent AI Architecture', 'skills.cybersecurity_direct:Model Context Protocol', 'skills.technical:LangChain', 'skills.technical:Ollama', 'skills.technical:Agentic workflow analysis', 'skills.cybersecurity_direct:AI Security'] },
 
@@ -366,9 +369,10 @@
 			keys: [['certification', 6], ['certified', 5], ['certificate', 5], ['cert', 5], ['credential', 4], ['isc2', 4], ['badge', 3], ['training', 2], ['course', 2]],
 			examples: ['what certifications does he hold', 'is he certified', 'what credentials does he have'],
 			say: [
-				'ISC2 Certified in Cybersecurity (CC), active through Aug 2028; Google Cybersecurity Professional Certificate V2 (2024; updated curriculum completed Jul 2026); Google AI Professional Certificate, 7-course specialization (Jul 2026); Cribl Certified Admin - Stream (Level 2); Cribl Certified User (Level 1); AI for App Deployment, Google (Aug 2026); Building LLM Applications With Prompt Engineering, NVIDIA Deep Learning Institute (Sep 2026); AWS Academy Graduate - Cloud Foundations - Training Badge (2022).',
+				'His main certification is ISC2 Certified in Cybersecurity (CC), active through Aug 2028. He also holds the Google Cybersecurity Professional Certificate V2 and Cribl Certified Admin - Stream (Level 2), and in 2026 he completed the Google AI Professional Certificate, AI for App Deployment (Google) and NVIDIA DLI Building LLM Applications With Prompt Engineering.',
 				'Security: ISC2 Certified in Cybersecurity (CC, active through Aug 2028), the Google Cybersecurity Professional Certificate V2, and Cribl Certified Admin - Stream (Level 2) plus Cribl Certified User (Level 1). AI: the Google AI Professional Certificate, AI for App Deployment (Google) and NVIDIA DLI Building LLM Applications With Prompt Engineering. Cloud: the AWS Academy Cloud Foundations training badge.'
 			],
+			more: 'Full list: ISC2 Certified in Cybersecurity (CC), active through Aug 2028; Google Cybersecurity Professional Certificate V2 (2024; updated curriculum completed Jul 2026); Google AI Professional Certificate, 7-course specialization (Jul 2026); Cribl Certified Admin - Stream (Level 2); Cribl Certified User (Level 1); AI for App Deployment, Google (Aug 2026); Building LLM Applications With Prompt Engineering, NVIDIA Deep Learning Institute (Sep 2026); AWS Academy Graduate - Cloud Foundations - Training Badge (2022).',
 			next: ['Does he have Security+?', 'What SIEM tools has he used?'],
 			refs: ['certifications:ISC2 Certified in Cybersecurity', 'certifications:Google Cybersecurity Professional Certificate', 'certifications:Cribl Certified Admin', 'certifications:Google AI Professional Certificate', 'certifications:Building LLM Applications'] },
 

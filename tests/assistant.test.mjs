@@ -202,6 +202,24 @@ check('every answer offers follow-ups', () => {
 	for (const t of assistant.topics) assert.ok(t.next.length >= 1, t.id);
 });
 
+// W1 (2026-11-11): skill and credential answers lead with short prose; the full
+// resume list is one "tell me more" away instead of being the first answer.
+for (const [q, topic, listStart] of [
+	['What are his skills in detection engineering?', 'detection', 'Detection and Incident Response:'],
+	['What SIEM tools has he used?', 'siem', 'Security Operations and SIEM:'],
+	['What AI skills does he have?', 'ai', 'AI Security and Agentic Systems:'],
+	['What certifications does he hold?', 'certifications', 'Full list:']
+]) {
+	check(`no list dump first: ${topic}`, () => {
+		const s = fresh();
+		const first = ask(q, s);
+		assert.equal(first.factIds[0], topic);
+		assert.ok(first.answer.length <= 480, `first answer is ${first.answer.length} chars`);
+		assert.ok((first.answer.match(/;/g) || []).length <= 2, `semicolon list in: ${first.answer}`);
+		assert.ok(ask('tell me more', s).answer.startsWith(listStart), 'full list not behind "tell me more"');
+	});
+}
+
 check('every follow-up and suggestion resolves to a real answer', () => {
 	const questions = new Set(assistant.suggestions);
 	for (const t of assistant.topics) t.next.forEach((q) => questions.add(q));
