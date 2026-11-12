@@ -1,3 +1,4 @@
 # Keep binary assets byte-for-byte (core.autocrlf is on for this clone)
 *.pdf binary
 *.woff2 binary
+fonts/*.txt -text
