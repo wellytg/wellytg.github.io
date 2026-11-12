@@ -3,11 +3,10 @@ document.addEventListener('DOMContentLoaded', function() {
     // Initialize all functionality
     initMobileMenu();
     initSmoothScrolling();
-    initNavbarScrollEffect();
+    // 2026-11-12 (Crimson Sapphire): no motion. The hide-on-scroll navbar, the card fade-in and the
+    // hero typing effect are switched off; the functions stay below for reference.
     initContactForm();
-    initScrollAnimations();
     initActiveNavigation();
-    initTypingAnimation();
 });
 
 // Mobile Menu Toggle
@@ -416,7 +415,7 @@ style.textContent = `
     }
     
     .nav-link.active {
-        color: var(--cyber-blue) !important;
+        color: var(--ink) !important;
     }
     
     .nav-link.active::after {

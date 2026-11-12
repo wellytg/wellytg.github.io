@@ -9,6 +9,7 @@
 		<meta
 			name="keywords"
 			content="cybersecurity, SOC analyst, detection engineering, CISA LME, Cribl, Elastic Stack, Wazuh, PhD researcher, Wellington, ISC2" />
+		<meta name="color-scheme" content="dark" />
 		<title>Wellington | SOC Analyst | Cybersecurity Researcher</title>
 
 		<link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
@@ -45,12 +46,12 @@
 			<symbol id="i-bank" viewBox="0 0 24 24" fill="currentColor"><path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-4.5-9L2 6v2h19V6l-9.5-5z" /></symbol>
 			<symbol id="i-servers" viewBox="0 0 24 24" fill="currentColor"><path d="M20 13H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zM7 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM20 3H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM7 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" /></symbol>
 		</svg>
-		<!-- Navigation -->
+
+		<!-- Design 2026-11-12 (round 7): Crimson Sapphire, fixed compact tiles, assistant featured in the hero. -->
 		<nav class="navbar" id="navbar">
 			<div class="nav-container">
-				<a href="#home" class="nav-logo">Wellington G.</a>
+				<a href="#home" class="nav-logo"><span class="mark" aria-hidden="true">WG</span><span>Wellington G.</span></a>
 				<ul class="nav-menu" id="nav-menu">
-					<li class="nav-item"><a href="#home" class="nav-link">Home</a></li>
 					<li class="nav-item"><a href="#about" class="nav-link">About</a></li>
 					<li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
 					<li class="nav-item"><a href="#research" class="nav-link">Research</a></li>
@@ -60,35 +61,37 @@
 					<li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
 					<li class="nav-item"><a href="architecture.html" class="nav-link">Architecture</a></li>
 				</ul>
-				<div class="nav-toggle" id="mobile-menu">
+				<button type="button" class="nav-toggle" id="mobile-menu" aria-label="Menu" aria-controls="nav-menu">
 					<span class="bar"></span>
 					<span class="bar"></span>
 					<span class="bar"></span>
-				</div>
+				</button>
 			</div>
 		</nav>
 
-		<!-- Hero Section -->
-		<section id="home" class="hero">
-			<div class="hero-container">
-				<div class="hero-content">
-					<div class="hero-image">
-						<!-- Uncomment and set src to add a profile photo -->
-						<!-- <div class="profile-pic">WG</div> -->
-					</div>
-					<h1 class="hero-name">Build. Observe. Optimize.</h1>
-					<p class="hero-title">SOC Analyst | Detection Engineer | Cybersecurity Researcher | PhD Candidate</p>
-					<p class="hero-subtitle">I research why SOCs fail — and then build the systems that make them work.</p>
-					<div class="hero-buttons">
-						<a href="#research" class="btn btn--primary">View Research</a>
-						<a href="assets/Wellington_Gwavava_Resume.pdf" class="btn btn--outline" download>Download Resume (PDF)</a>
-						<a href="#contact" class="btn btn--outline">Contact Me</a>
-						<!-- MUTED 2026-08-18: hero Request CV button stays hidden (the contact form it fills is still muted). -->
+		<main class="wrap">
+			<!-- Hero: identity band and the Resume Assistant -->
+			<section id="home" class="hero ch">
+				<div class="in">
+					<div class="hero-id">
+						<p class="kicker">SOC Analyst | Detection Engineer | Cybersecurity Researcher | PhD Candidate</p>
+						<h1 class="hero-name">Build. <em>Observe.</em> Optimize.</h1>
+						<p class="lede">I research why SOCs fail — and then build the systems that make them work.</p>
+						<dl class="kpis">
+							<div><dt>Peer-reviewed papers</dt><dd><b>2</b><span>+1 forthcoming</span></dd></div>
+							<div><dt>Certifications</dt><dd><b>7</b><span>ISC2 CC, Cribl L2</span></dd></div>
+							<div><dt>Projects</dt><dd><b>13</b><span>research to hackathons</span></dd></div>
+						</dl>
+						<div class="hero-buttons">
+							<a href="#research" class="b b--primary">View Research</a>
+							<a href="assets/Wellington_Gwavava_Resume.pdf" class="b" download>Download Resume (PDF)</a>
+							<a href="#contact" class="b">Contact Me</a>
+							<!-- MUTED 2026-08-18: hero Request CV button stays hidden (the contact form it fills is still muted). -->
 <!--
 <a href="#" aria-disabled="true" data-muted="contact-section" id="request-cv-btn" class="btn btn--outline">Request CV</a>
 -->
-					</div>
-					<!-- MUTED 2026-08-18: hero social-links row hidden for hero redesign. -->
+						</div>
+						<!-- MUTED 2026-08-18: hero social-links row hidden for hero redesign. -->
 <!--
 <div class="social-links">
 						<a href="#" aria-disabled="true" data-muted="wellytg-personal-linkedin" target="_blank" aria-label="LinkedIn">
@@ -108,584 +111,560 @@
 						</a>
 					</div>
 -->
-				</div>
-			</div>
-		</section>
-
-		<!-- About Section -->
-		<section id="about" class="about">
-			<div class="container">
-				<h2 class="section-title">About Me</h2>
-				<div class="about-content">
-					<div class="about-text">
-						<p>Cybersecurity practitioner and researcher with hands-on SOC operations experience and an active PhD in Cyber Studies at the University of Tulsa. Deployed the full CISA Logging Made Easy (LME) stack — integrating Cribl pipelines, Wazuh endpoint detection, and Elastic Stack dashboards for threat detection in resource-constrained environments.</p>
-						<p>
-							Two peer-reviewed papers published (Pre-ICIS 2025; WOSOC 2025), a third forthcoming at HICSS-60.
-							Holds ISC2 Certified in Cybersecurity (CC) and Cribl Certified Admin Level 2.
-							Secretary, ISC2 Tulsa Metro Chapter.
-							Two years as Acting Chairperson of Computer Science at Harare Institute of Technology, leading 10 faculty.
-						</p>
-						<p>My research bridges the gap between CISO strategic objectives and analyst-level detection practice — translating academic findings directly into SOC operations through the SOC Goal Incongruency framework.</p>
 					</div>
-					<div class="education-section">
-						<h3>Education</h3>
-						<div class="education-list">
-							<div class="education-item">
-								<h4>Doctor of Philosophy — Cyber Studies</h4>
-								<p class="institution">The University of Tulsa</p>
-								<p class="years">2023 – May 2027 (Expected)</p>
-							</div>
-							<div class="education-item">
-								<h4>Master of Technology — Computer Science</h4>
-								<p class="institution">JNTUH College of Engineering Hyderabad</p>
-								<p class="years">2013 – 2015</p>
-								<p class="honors">First Class with Distinction</p>
-							</div>
-							<div class="education-item">
-								<h4>Bachelor of Technology — Computer Science</h4>
-								<p class="institution">Harare Institute of Technology</p>
-								<p class="years">2007 – 2011</p>
-								<p class="honors">Second Upper Class</p>
+
+					<!-- Resume Assistant (rule-based, runs in the browser; see assistant.js) -->
+					<div id="assistant" class="assistant ch">
+						<div class="in">
+							<div class="as-head"><span class="as-dot" aria-hidden="true"></span><h2>Resume Assistant</h2><span class="as-note">rule-based · runs in your browser</span></div>
+							<p class="assistant-label">Resume assistant: answers only from my resume and skills record, including what I am still learning. It is rule-based, not an AI model, and nothing you type leaves this page.</p>
+							<div id="assistant-answer" class="assistant-answer" aria-live="polite"></div>
+							<div id="assistant-suggestions" class="assistant-suggestions" aria-label="Suggested questions"></div>
+							<form id="assistant-form" class="assistant-form" autocomplete="off">
+								<label for="assistant-input" class="sr-only">Ask a question about my resume</label>
+								<input type="text" id="assistant-input" class="form-control" maxlength="300" placeholder="e.g. Has Wellington led a team?" />
+								<button type="submit" class="b b--primary">Ask</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- About Section -->
+			<section id="about" class="sec ch">
+				<div class="in">
+					<div class="sec-hd"><h2><span>01</span>About Me</h2></div>
+					<div class="about-grid">
+						<div class="about-text">
+							<p>Cybersecurity practitioner and researcher with hands-on SOC operations experience and an active PhD in Cyber Studies at the University of Tulsa. Deployed the full CISA Logging Made Easy (LME) stack — integrating Cribl pipelines, Wazuh endpoint detection, and Elastic Stack dashboards for threat detection in resource-constrained environments.</p>
+							<p>
+								Two peer-reviewed papers published (Pre-ICIS 2025; WOSOC 2025), a third forthcoming at HICSS-60.
+								Holds ISC2 Certified in Cybersecurity (CC) and Cribl Certified Admin Level 2.
+								Secretary, ISC2 Tulsa Metro Chapter.
+								Two years as Acting Chairperson of Computer Science at Harare Institute of Technology, leading 10 faculty.
+							</p>
+							<p>My research bridges the gap between CISO strategic objectives and analyst-level detection practice — translating academic findings directly into SOC operations through the SOC Goal Incongruency framework.</p>
+						</div>
+						<div class="education-section">
+							<h3 class="sub"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-school"></use></svg><span>Education</span></h3>
+							<div class="education-list">
+								<div class="education-item">
+									<h4>Doctor of Philosophy — Cyber Studies</h4>
+									<p class="institution">The University of Tulsa</p>
+									<p class="years">2023 – May 2027 (Expected)</p>
+								</div>
+								<div class="education-item">
+									<h4>Master of Technology — Computer Science</h4>
+									<p class="institution">JNTUH College of Engineering Hyderabad</p>
+									<p class="years">2013 – 2015</p>
+									<p class="honors">First Class with Distinction</p>
+								</div>
+								<div class="education-item">
+									<h4>Bachelor of Technology — Computer Science</h4>
+									<p class="institution">Harare Institute of Technology</p>
+									<p class="years">2007 – 2011</p>
+									<p class="honors">Second Upper Class</p>
+								</div>
 							</div>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Experience Section (wording from the October 2026 web resume) -->
-		<section id="experience" class="experience">
-			<div class="container">
-				<h2 class="section-title">Experience</h2>
-				<div class="experience-list">
-					<div class="experience-item">
-						<div class="experience-header">
-							<h3>SOC Research Externship (Part-time) <span class="experience-org">| The University of Tulsa</span></h3>
+			<!-- Experience Section (wording from the October 2026 web resume) -->
+			<section id="experience" class="sec ch">
+				<div class="in">
+					<div class="sec-hd"><h2><span>02</span>Experience</h2><a href="assets/Wellington_Gwavava_Resume.pdf" class="b b--sm" download>Download the full resume (PDF)</a></div>
+					<div class="experience-list">
+						<div class="experience-item">
 							<p class="years">Aug 2025 - Present</p>
+							<div>
+								<h3>SOC Research Externship (Part-time) <span class="experience-org">| The University of Tulsa</span></h3>
+								<p class="experience-sub">Tulsa, OK | Applied operational SOC fieldwork</p>
+								<ul>
+									<li>Investigate security events in a live university SOC and evaluate how well AI-augmented detection workflows support alert triage; track US-CERT and vendor advisories for situational awareness.</li>
+									<li>Apply doctoral research on CISO-analyst strategic alignment in a live SOC environment.</li>
+								</ul>
+							</div>
 						</div>
-						<p class="experience-sub">Tulsa, OK | Applied operational SOC fieldwork</p>
-						<ul>
-							<li>Investigate security events in a live university SOC and evaluate how well AI-augmented detection workflows support alert triage; track US-CERT and vendor advisories for situational awareness.</li>
-							<li>Apply doctoral research on CISO-analyst strategic alignment in a live SOC environment.</li>
-						</ul>
-					</div>
-					<div class="experience-item">
-						<div class="experience-header">
-							<h3>Security Operations Center Analyst <span class="experience-org">| The University of Tulsa</span></h3>
+						<div class="experience-item">
 							<p class="years">May 2025 - Aug 2025</p>
+							<div>
+								<h3>Security Operations Center Analyst <span class="experience-org">| The University of Tulsa</span></h3>
+								<p class="experience-sub">Tulsa, OK | Full-time SOC internship</p>
+								<ul>
+									<li>Delivered the full CISA LME stack in an operational SOC; the deployment was adopted as the SOC's operational standard. Wrote Python automation for multi-source log ingestion and configured Cribl Stream pipelines for routing, enrichment, and normalization across Windows and Linux endpoints.</li>
+									<li>Built custom Elastic Stack dashboards for lateral movement and credential dumping detection, fed by Wazuh HIDS/EDR and Elastic Agent endpoint telemetry; worked with SentinelOne and Varonis for endpoint and data security coverage.</li>
+									<li>Validated detection rules against MITRE ATT&amp;CK and MITRE D3FEND; set success criteria before deployment, automated repeatable security reporting in Python, and presented quantified findings to the CISO and SOC leadership.</li>
+									<li>Authored deployment documentation, including installation guides, field dictionaries, and operational runbooks.</li>
+								</ul>
+							</div>
 						</div>
-						<p class="experience-sub">Tulsa, OK | Full-time SOC internship</p>
-						<ul>
-							<li>Delivered the full CISA LME stack in an operational SOC; the deployment was adopted as the SOC's operational standard. Wrote Python automation for multi-source log ingestion and configured Cribl Stream pipelines for routing, enrichment, and normalization across Windows and Linux endpoints.</li>
-							<li>Built custom Elastic Stack dashboards for lateral movement and credential dumping detection, fed by Wazuh HIDS/EDR and Elastic Agent endpoint telemetry; worked with SentinelOne and Varonis for endpoint and data security coverage.</li>
-							<li>Validated detection rules against MITRE ATT&amp;CK and MITRE D3FEND; set success criteria before deployment, automated repeatable security reporting in Python, and presented quantified findings to the CISO and SOC leadership.</li>
-							<li>Authored deployment documentation, including installation guides, field dictionaries, and operational runbooks.</li>
-						</ul>
-					</div>
-					<div class="experience-item">
-						<div class="experience-header">
-							<h3>Graduate Research Assistant and TU Cyber Fellow <span class="experience-org">| The University of Tulsa</span></h3>
+						<div class="experience-item">
 							<p class="years">Aug 2023 - Present</p>
+							<div>
+								<h3>Graduate Research Assistant and TU Cyber Fellow <span class="experience-org">| The University of Tulsa</span></h3>
+								<p class="experience-sub">Tulsa, OK</p>
+								<ul>
+									<li>Doctoral research on SOC goal incongruency, designing quantitative metrics that separate risk mitigated from activity volume. Dissertation adviser: Tyler Moore. Expected completion: May 2027.</li>
+									<li>Reached greater than 85 percent cross-model agreement with SOC-Job-Task-Analyzer, an agentic LLM pipeline that extracts and classifies SOC analyst task duties from 49 job descriptions, with human-in-the-loop validation.</li>
+									<li>Published two peer-reviewed papers with Andrew Morin (Idaho National Labs) at Pre-ICIS/WISP 2025 and WOSOC/NDSS Symposium 2025; presented research at TU Research Day 2026.</li>
+								</ul>
+							</div>
 						</div>
-						<p class="experience-sub">Tulsa, OK</p>
-						<ul>
-							<li>Doctoral research on SOC goal incongruency, designing quantitative metrics that separate risk mitigated from activity volume. Dissertation adviser: Tyler Moore. Expected completion: May 2027.</li>
-							<li>Reached greater than 85 percent cross-model agreement with SOC-Job-Task-Analyzer, an agentic LLM pipeline that extracts and classifies SOC analyst task duties from 49 job descriptions, with human-in-the-loop validation.</li>
-							<li>Published two peer-reviewed papers with Andrew Morin (Idaho National Labs) at Pre-ICIS/WISP 2025 and WOSOC/NDSS Symposium 2025; presented research at TU Research Day 2026.</li>
-						</ul>
-					</div>
-					<div class="experience-item">
-						<div class="experience-header">
-							<h3>Acting Department Chairperson and Lecturer <span class="experience-org">| Harare Institute of Technology</span></h3>
+						<div class="experience-item">
 							<p class="years">2012 - 2023</p>
+							<div>
+								<h3>Acting Department Chairperson and Lecturer <span class="experience-org">| Harare Institute of Technology</span></h3>
+								<p class="experience-sub">Zimbabwe | Department of Computer Science, progression from Teaching Assistant through Chairperson</p>
+								<ul>
+									<li>Developed and delivered course materials for 18 subjects, including AI and Expert Systems, Neural Networks and Pattern Matching, Smartcard Cryptosystems, and Mobile Computing and Wireless Networks; supervised 2 MTech and 15 BTech research projects.</li>
+									<li>As chair managing 10 faculty, launched 3 new degree programs (1 BTech, 2 MTech), digitized approximately 70 percent of departmental SOPs, and established an Industry Advisory Board of 8 experts.</li>
+								</ul>
+							</div>
 						</div>
-						<p class="experience-sub">Zimbabwe | Department of Computer Science, progression from Teaching Assistant through Chairperson</p>
-						<ul>
-							<li>Developed and delivered course materials for 18 subjects, including AI and Expert Systems, Neural Networks and Pattern Matching, Smartcard Cryptosystems, and Mobile Computing and Wireless Networks; supervised 2 MTech and 15 BTech research projects.</li>
-							<li>As chair managing 10 faculty, launched 3 new degree programs (1 BTech, 2 MTech), digitized approximately 70 percent of departmental SOPs, and established an Industry Advisory Board of 8 experts.</li>
-						</ul>
 					</div>
 				</div>
-				<p class="experience-download"><a href="assets/Wellington_Gwavava_Resume.pdf" class="btn btn--outline btn--sm" download>Download the full resume (PDF)</a></p>
-			</div>
-		</section>
+			</section>
 
-		<!-- Research Section -->
-		<section id="research" class="research">
-			<div class="container">
-				<h2 class="section-title">Research</h2>
-				<div class="research-content">
+			<!-- Research Section -->
+			<section id="research" class="sec ch">
+				<div class="in">
+					<div class="sec-hd"><h2><span>03</span>Research</h2><span class="lbl">SOC Goal Incongruency</span></div>
 					<div class="research-overview">
-						<h3>Current PhD Research</h3>
+						<h3 class="sub">Current PhD Research</h3>
 						<p>My doctoral research investigates the strategic coherence between Chief Information Security Officers (CISOs) and Security Operations Center (SOC) analysts — the <strong>SOC Goal Incongruency</strong> framework. I design quantitative risk metrics that measure risk mitigated versus activity volume, applied to CISA LME deployment in resource-constrained SOC environments.</p>
 					</div>
-
-					<div class="research-areas">
-						<h3>Key Research Areas</h3>
-						<div class="research-grid">
-							<div class="research-card">
-								<h4>SOC Goal Incongruency</h4>
-								<p>Investigating why strategic alignment breaks down between CISO objectives and analyst monitoring practice — and designing frameworks to quantify and fix it.</p>
-							</div>
-							<div class="research-card">
-								<h4>Quantitative Security Metrics</h4>
-								<p>Designing risk metrics that measure risk mitigated versus activity volume — moving SOCs beyond alert counts toward outcome-based performance measurement.</p>
-							</div>
-							<div class="research-card">
-								<h4>Detection Engineering</h4>
-								<p>Applying CISA LME, Cribl, Wazuh, and ELK in resource-constrained environments to demonstrate enterprise-grade detection capability without enterprise budgets.</p>
-							</div>
-							<div class="research-card">
-								<h4>Agency Theory in Cybersecurity</h4>
-								<p>Applying agency theory to understand principal-agent dynamics between CISOs and SOC analysts, and how incentive misalignment degrades security posture at scale.</p>
-							</div>
+					<h3 class="sub">Key Research Areas</h3>
+					<div class="research-grid">
+						<div class="research-card">
+							<h4>SOC Goal Incongruency</h4>
+							<p>Investigating why strategic alignment breaks down between CISO objectives and analyst monitoring practice — and designing frameworks to quantify and fix it.</p>
+						</div>
+						<div class="research-card">
+							<h4>Quantitative Security Metrics</h4>
+							<p>Designing risk metrics that measure risk mitigated versus activity volume — moving SOCs beyond alert counts toward outcome-based performance measurement.</p>
+						</div>
+						<div class="research-card">
+							<h4>Detection Engineering</h4>
+							<p>Applying CISA LME, Cribl, Wazuh, and ELK in resource-constrained environments to demonstrate enterprise-grade detection capability without enterprise budgets.</p>
+						</div>
+						<div class="research-card">
+							<h4>Agency Theory in Cybersecurity</h4>
+							<p>Applying agency theory to understand principal-agent dynamics between CISOs and SOC analysts, and how incentive misalignment degrades security posture at scale.</p>
 						</div>
 					</div>
-
+					<h3 class="sub">Publications</h3>
 					<div class="publications">
-						<h3>Publications</h3>
-						<div class="publication-item" style="margin-bottom: var(--space-16);">
-							<h4>
-								<a href="https://hicss.hawaii.edu/" target="_blank" rel="noopener noreferrer">
-									Beyond Measuring Busyness: A Goal-Coherence Diagnostic for Auditing the Incentive Signal in Security Operations Center Performance Measurement
-								</a>
-							</h4>
-							<p class="authors">Wellington Gwavava, Tyler Moore</p>
+						<div class="publication-item">
 							<p class="venue">60th Hawaii International Conference on System Sciences (HICSS-60) — Forthcoming 2027</p>
-						</div>
-						<div class="publication-item" style="margin-bottom: var(--space-16);">
-							<h4>
-								<a href="https://aisel.aisnet.org/wisp2025/15/" target="_blank" rel="noopener noreferrer">
-									Measuring Strategy Coherence in Security Operations Centers: A Goal-Metric Mapping Framework
-								</a>
-							</h4>
-							<p class="authors">WT Gwavava, A Morin</p>
-							<p class="venue">Pre-ICIS Workshop on Information Security &amp; Privacy — Nashville, December 2025</p>
+							<h4><a href="https://hicss.hawaii.edu/" target="_blank" rel="noopener noreferrer">Beyond Measuring Busyness: A Goal-Coherence Diagnostic for Auditing the Incentive Signal in Security Operations Center Performance Measurement</a></h4>
+							<p class="authors">Wellington Gwavava, Tyler Moore</p>
 						</div>
 						<div class="publication-item">
-							<h4>
-								Mismatched SOCs: A Case Study of Cybersecurity Goal Incongruency Within an Academic SOC
-							</h4>
+							<p class="venue">Pre-ICIS Workshop on Information Security &amp; Privacy — Nashville, December 2025</p>
+							<h4><a href="https://aisel.aisnet.org/wisp2025/15/" target="_blank" rel="noopener noreferrer">Measuring Strategy Coherence in Security Operations Centers: A Goal-Metric Mapping Framework</a></h4>
 							<p class="authors">WT Gwavava, A Morin</p>
+						</div>
+						<div class="publication-item">
 							<p class="venue">Workshop on SOC Operations and Construction (WOSOC 2025), Co-located with NDSS Symposium 2025 — San Diego, CA</p>
+							<h4>Mismatched SOCs: A Case Study of Cybersecurity Goal Incongruency Within an Academic SOC</h4>
+							<p class="authors">WT Gwavava, A Morin</p>
 						</div>
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Projects Section -->
-		<section id="projects" class="projects">
-			<div class="container">
-				<h2 class="section-title">Projects</h2>
-				<div class="projects-grid">
-
-					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg></span>
-							<div class="card-heading">
-								<h3>CISA LME SOC Deployment</h3>
-								<span class="status status--info">Active Research</span>
-							</div>
-						</div>
-						<p>Architected and deployed the full CISA Logging Made Easy stack — Cribl pipeline orchestration, Wazuh/Elastic Agent endpoint telemetry, and custom ELK dashboards targeting lateral movement and credential dumping detection. Foundation for PhD risk metrics research.</p>
-						<div class="project-tech">
-							<span class="tech-tag">Cribl</span>
-							<span class="tech-tag">Elastic Stack</span>
-							<span class="tech-tag">Wazuh</span>
-							<span class="tech-tag">MITRE ATT&CK</span>
-						</div>
-					</div>
+			<!-- Projects Section: fixed tiles; Details opens a panel with the full text and every link -->
+			<section id="projects" class="sec ch">
+				<div class="in">
+					<div class="sec-hd"><h2><span>04</span>Projects</h2><span class="lbl">13 projects · Details opens the full entry</span></div>
+					<div class="projects-grid">
 
 					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg></span>
-							<div class="card-heading">
-								<h3>DigiVault — AI Security Recon</h3>
-								<span class="status status--success">Live</span>
-							</div>
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg></span>
+							<div class="tile-ttl"><h3>CISA LME SOC Deployment</h3><span class="chips"><span class="chip">Active Research</span></span></div>
 						</div>
-						<p>AI-powered automated public profile construction and breach detection platform. Built for Hurricane Hackathon 2026 using Vanilla JS. Features real-time OSINT aggregation and breach analysis.</p>
-						<div class="project-tech">
-							<span class="tech-tag">Vanilla JS</span>
-							<span class="tech-tag">OSINT</span>
-							<span class="tech-tag">Security Recon</span>
+						<p class="tile-sum">Full CISA LME stack (Cribl, Wazuh, Elastic) deployed in an operational SOC.</p>
+						<div class="tile-ft">
+							<span class="tile-tags">Cribl · Elastic Stack · Wazuh · MITRE ATT&CK</span>
+							<span class="tile-ln"><button type="button" class="tile-more" popovertarget="pd-cisa-lme-soc-deployment">Details</button></span>
 						</div>
-						<div class="project-links">
-							<a href="https://wellytg.github.io/digivault/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Live Demo</a>
-							<a href="https://wellytg.github.io/digivault/presentation.html" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Presentation Deck</a>
-						</div>
-					</div>
-
-					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-chart"></use></svg></span>
-							<div class="card-heading">
-								<h3>SOC Strategic Alignment Simulator</h3>
-								<span class="status status--success">Live</span>
-							</div>
-						</div>
-						<p>Research simulation of the SOC Speed-Quality Paradox introducing the <strong>Goal-Coherence Matrix (GCM)</strong> framework to visualise misalignment between executive strategy and analyst incentives. Includes the GCM Explorer for interactive matrix analysis. Built with Vanilla JS and Firebase.</p>
-						<div class="project-tech">
-							<span class="tech-tag">Vanilla JS</span>
-							<span class="tech-tag">Firebase</span>
-							<span class="tech-tag">Research Sim</span>
-						</div>
-						<div class="project-links">
-							<a href="https://wellytg.github.io/soc-paradox-sim/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Launch Simulator</a>
-							<a href="https://wellytg.github.io/soc-paradox-sim/presentation.html" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Research Deck</a>
-							<a href="https://wellytg.github.io/soc-paradox/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GCM Explorer</a>
-							<a href="https://wellytg.github.io/soc-paradox/research_artifacts/Preliminary%20%20full%20matrix/SOC_T1_Agreement_Dashboard.html" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">LLM Agreement</a>
-						</div>
-					</div>
-
-					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-chip"></use></svg></span>
-							<div class="card-heading">
-								<h3>SOC-Job-Task-Analyzer</h3>
-								<span class="status status--info">PhD Research</span>
-							</div>
-						</div>
-						<p>Agentic LLM pipeline that extracts and classifies SOC analyst task duties from 49 job descriptions, with human-in-the-loop validation. Reached greater than 85 percent cross-model agreement as part of doctoral research on SOC goal incongruency.</p>
-						<div class="project-tech">
-							<span class="tech-tag">Agentic LLM Pipeline</span>
-							<span class="tech-tag">Cross-Model Validation</span>
-							<span class="tech-tag">Human-in-the-Loop</span>
-						</div>
-						<div class="project-links">
-							<a href="https://github.com/wellytg/SOC-Job-Task-Analyzer" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a>
-						</div>
-					</div>
-
-					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-group"></use></svg></span>
-							<div class="card-heading">
-								<h3>SPYN — Smart People You Need</h3>
-								<span class="status status--success">Live</span>
-							</div>
-						</div>
-						<p>Talent-matching MVP for Hurricane Pitch competition — connecting people to the right professionals on demand.</p>
-						<div class="project-tech">
-							<span class="tech-tag">Web App</span>
-							<span class="tech-tag">Cloud Run</span>
-							<span class="tech-tag">MVP</span>
-						</div>
-						<div class="project-links">
-							<a href="https://spyn-smart-people-you-need-prototype-448474372841.us-west1.run.app/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Live Prototype</a>
-							<a href="https://github.com/wellytg/SPYN" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a>
-						</div>
-					</div>
-
-					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-school"></use></svg></span>
-							<div class="card-heading">
-								<h3>ASPIRE AI Workshop — Rise-up Learning Hub</h3>
-								<span class="status status--success">1st Place</span>
-							</div>
-						</div>
-						<p>Adult education and skills development platform built for the ASPIRE AI business challenge using Lovable.dev. Won first place in the business challenge.</p>
-						<div class="project-tech">
-							<span class="tech-tag">Lovable.dev</span>
-							<span class="tech-tag">EdTech</span>
-							<span class="tech-tag">AI</span>
-						</div>
-						<div class="project-links">
-							<a href="https://rise-up-launchpad.lovable.app/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Live Site</a>
+						<div id="pd-cisa-lme-soc-deployment" class="pd" popover>
+							<div class="pd-hd"><h3>CISA LME SOC Deployment</h3><button type="button" class="pd-x" popovertarget="pd-cisa-lme-soc-deployment" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip">Active Research</span></div>
+							<p>Architected and deployed the full CISA Logging Made Easy stack — Cribl pipeline orchestration, Wazuh/Elastic Agent endpoint telemetry, and custom ELK dashboards targeting lateral movement and credential dumping detection. Foundation for PhD risk metrics research.</p>
+							<div class="project-tech"><span class="tech-tag">Cribl</span><span class="tech-tag">Elastic Stack</span><span class="tech-tag">Wazuh</span><span class="tech-tag">MITRE ATT&CK</span></div>
 						</div>
 					</div>
 
 					<!-- Added 2026-11-11 (Will-approved final wording, round 2; no competition result stated) -->
 					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg></span>
-							<div class="card-heading">
-								<h3>Shadowfenced — Local AI Egress Guard</h3>
-								<span class="status status--info">Meta Hackathon 2026</span>
-							</div>
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg></span>
+							<div class="tile-ttl"><h3>Shadowfenced</h3><span class="chips"><span class="chip chip--hot">Meta Hackathon 2026</span><span class="chip chip--role">Designed and directed</span></span></div>
 						</div>
-						<p>Meta Global AI Developer Hackathon (Indie track), 2026: designed and directed Shadowfenced, a local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents.</p>
-						<div class="project-tech">
-							<span class="tech-tag">AI Security</span>
-							<span class="tech-tag">AI Coding Agents</span>
-							<span class="tech-tag">Egress Guard</span>
+						<p class="tile-sum">A local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents.</p>
+						<div class="tile-ft">
+							<span class="tile-tags">AI Security · AI Coding Agents · Egress Guard</span>
+							<span class="tile-ln"><a href="https://github.com/wellytg/meta-hackathon-shadowfenced" target="_blank" rel="noopener noreferrer" class="tile-link">GitHub</a><button type="button" class="tile-more" popovertarget="pd-shadowfenced">Details</button></span>
 						</div>
-						<div class="project-links">
-							<a href="https://github.com/wellytg/meta-hackathon-shadowfenced" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a>
+						<div id="pd-shadowfenced" class="pd" popover>
+							<div class="pd-hd"><h3>Shadowfenced — Local AI Egress Guard</h3><button type="button" class="pd-x" popovertarget="pd-shadowfenced" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip chip--hot">Meta Hackathon 2026</span><span class="chip chip--role">Designed and directed</span></div>
+							<p>Meta Global AI Developer Hackathon (Indie track), 2026: designed and directed Shadowfenced, a local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents.</p>
+							<div class="project-tech"><span class="tech-tag">AI Security</span><span class="tech-tag">AI Coding Agents</span><span class="tech-tag">Egress Guard</span></div>
+							<div class="project-links"><a href="https://github.com/wellytg/meta-hackathon-shadowfenced" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a></div>
 						</div>
 					</div>
 
 					<!-- Added 2026-11-11 (Will chose option A; wording verbatim; no result or track stated) -->
 					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-lock"></use></svg></span>
-							<div class="card-heading">
-								<h3>Context Forge — Role-Bounded Fleet Security Agent</h3>
-								<span class="status status--info">IBM Dev Day 2026</span>
-							</div>
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-lock"></use></svg></span>
+							<div class="tile-ttl"><h3>Context Forge</h3><span class="chips"><span class="chip chip--hot">IBM Dev Day 2026</span><span class="chip chip--role">Designed and directed</span></span></div>
 						</div>
-						<p>IBM TechXchange 2026 Dev Day Hackathon, 2026: designed and directed Context Forge, a role-bounded fleet security agent whose two independent gates stop device updates from escalating privileges.</p>
-						<div class="project-tech">
-							<span class="tech-tag">Python</span>
-							<span class="tech-tag">FastAPI</span>
-							<span class="tech-tag">Least Privilege</span>
+						<p class="tile-sum">A role-bounded fleet security agent whose two independent gates stop device updates from escalating privileges.</p>
+						<div class="tile-ft">
+							<span class="tile-tags">Python · FastAPI · Least Privilege</span>
+							<span class="tile-ln"><a href="https://github.com/wellytg/context-forge-hackathon" target="_blank" rel="noopener noreferrer" class="tile-link">GitHub</a><button type="button" class="tile-more" popovertarget="pd-context-forge">Details</button></span>
 						</div>
-						<div class="project-links">
-							<a href="https://github.com/wellytg/context-forge-hackathon" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a>
-							<a href="https://youtu.be/z53_IAGWJXo" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Demo video</a>
-						</div>
-					</div>
-
-					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-chip"></use></svg></span>
-							<div class="card-heading">
-								<h3>Sensei — Multi-Agent AI Coaching Platform</h3>
-								<span class="status status--info">Hacklahoma 2026</span>
-							</div>
-						</div>
-						<p>Built and deployed a multi-agent AI coaching app in 22 hours as part of a 4-person team at Hacklahoma 2026 (Feb 2026), using Claude Sonnet API (Coach and Reflection agents with tool-use loops), TanStack Start, Cloudflare Workers, D1/SQLite, Drizzle ORM, Google Calendar API, and Google OAuth.</p>
-						<div class="project-tech">
-							<span class="tech-tag">Claude Sonnet API</span>
-							<span class="tech-tag">TanStack Start</span>
-							<span class="tech-tag">Cloudflare Workers</span>
-							<span class="tech-tag">D1/SQLite</span>
-						</div>
-						<div class="project-links">
-							<a href="https://devpost.com/software/project-sensei" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Devpost</a>
+						<div id="pd-context-forge" class="pd" popover>
+							<div class="pd-hd"><h3>Context Forge — Role-Bounded Fleet Security Agent</h3><button type="button" class="pd-x" popovertarget="pd-context-forge" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip chip--hot">IBM Dev Day 2026</span><span class="chip chip--role">Designed and directed</span></div>
+							<p>IBM TechXchange 2026 Dev Day Hackathon, 2026: designed and directed Context Forge, a role-bounded fleet security agent whose two independent gates stop device updates from escalating privileges.</p>
+							<div class="project-tech"><span class="tech-tag">Python</span><span class="tech-tag">FastAPI</span><span class="tech-tag">Least Privilege</span></div>
+							<div class="project-links"><a href="https://github.com/wellytg/context-forge-hackathon" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a><a href="https://youtu.be/z53_IAGWJXo" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Demo video</a></div>
 						</div>
 					</div>
 
 					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-code"></use></svg></span>
-							<div class="card-heading">
-								<h3>Hacklahoma Dream Team</h3>
-								<span class="status status--info">Hackathon</span>
-							</div>
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-chip"></use></svg></span>
+							<div class="tile-ttl"><h3>SOC-Job-Task-Analyzer</h3><span class="chips"><span class="chip">PhD Research</span></span></div>
 						</div>
-						<p>Team hackathon project from Hacklahoma — collaborative full-stack development with TypeScript.</p>
-						<div class="project-tech">
-							<span class="tech-tag">TypeScript</span>
-							<span class="tech-tag">Hackathon</span>
+						<p class="tile-sum">Agentic LLM pipeline that classifies SOC duties from 49 job descriptions (>85% agreement).</p>
+						<div class="tile-ft">
+							<span class="tile-tags">Agentic LLM Pipeline · Cross-Model Validation · Human-in-the-Loop</span>
+							<span class="tile-ln"><a href="https://github.com/wellytg/SOC-Job-Task-Analyzer" target="_blank" rel="noopener noreferrer" class="tile-link">GitHub</a><button type="button" class="tile-more" popovertarget="pd-soc-job-task-analyzer">Details</button></span>
 						</div>
-						<div class="project-links">
-							<a href="https://github.com/wellytg/hacklahoma-dream-team" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a>
-						</div>
-					</div>
-
-					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg></span>
-							<div class="card-heading">
-								<h3>Screen Online — Children's Digital Safety Apps</h3>
-								<span class="status status--info">Published 2022</span>
-							</div>
-						</div>
-						<p>Series of Android edutainment apps educating children about online safety, developed for Childline Zimbabwe. Two versions (Tsuro in Digiland v1; Agent Tsuro v2) were published on Google Play in 2022.</p>
-						<div class="project-tech">
-							<span class="tech-tag">Android</span>
-							<span class="tech-tag">Java</span>
-							<span class="tech-tag">Edutainment</span>
+						<div id="pd-soc-job-task-analyzer" class="pd" popover>
+							<div class="pd-hd"><h3>SOC-Job-Task-Analyzer</h3><button type="button" class="pd-x" popovertarget="pd-soc-job-task-analyzer" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip">PhD Research</span></div>
+							<p>Agentic LLM pipeline that extracts and classifies SOC analyst task duties from 49 job descriptions, with human-in-the-loop validation. Reached greater than 85 percent cross-model agreement as part of doctoral research on SOC goal incongruency.</p>
+							<div class="project-tech"><span class="tech-tag">Agentic LLM Pipeline</span><span class="tech-tag">Cross-Model Validation</span><span class="tech-tag">Human-in-the-Loop</span></div>
+							<div class="project-links"><a href="https://github.com/wellytg/SOC-Job-Task-Analyzer" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a></div>
 						</div>
 					</div>
 
 					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-bolt"></use></svg></span>
-							<div class="card-heading">
-								<h3>Solar Calculator</h3>
-								<span class="status status--success">Live</span>
-							</div>
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-chart"></use></svg></span>
+							<div class="tile-ttl"><h3>SOC Strategic Alignment Simulator</h3><span class="chips"><span class="chip">Live</span></span></div>
 						</div>
-						<p>A utility tool for calculating solar energy requirements — panel sizing, battery capacity, and system cost estimation.</p>
-						<div class="project-tech">
-							<span class="tech-tag">JavaScript</span>
-							<span class="tech-tag">Utility</span>
+						<p class="tile-sum">Simulates the SOC speed-quality paradox with the Goal-Coherence Matrix.</p>
+						<div class="tile-ft">
+							<span class="tile-tags">Vanilla JS · Firebase · Research Sim</span>
+							<span class="tile-ln"><a href="https://wellytg.github.io/soc-paradox-sim/" target="_blank" rel="noopener noreferrer" class="tile-link">Launch Simulator</a><button type="button" class="tile-more" popovertarget="pd-soc-strategic-alignment-simulator">Details</button></span>
 						</div>
-						<div class="project-links">
-							<a href="https://wellytg.github.io/SolarCalculator/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Launch Tool</a>
+						<div id="pd-soc-strategic-alignment-simulator" class="pd" popover>
+							<div class="pd-hd"><h3>SOC Strategic Alignment Simulator</h3><button type="button" class="pd-x" popovertarget="pd-soc-strategic-alignment-simulator" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip">Live</span></div>
+							<p>Research simulation of the SOC Speed-Quality Paradox introducing the <strong>Goal-Coherence Matrix (GCM)</strong> framework to visualise misalignment between executive strategy and analyst incentives. Includes the GCM Explorer for interactive matrix analysis. Built with Vanilla JS and Firebase.</p>
+							<div class="project-tech"><span class="tech-tag">Vanilla JS</span><span class="tech-tag">Firebase</span><span class="tech-tag">Research Sim</span></div>
+							<div class="project-links"><a href="https://wellytg.github.io/soc-paradox-sim/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Launch Simulator</a><a href="https://wellytg.github.io/soc-paradox-sim/presentation.html" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Research Deck</a><a href="https://wellytg.github.io/soc-paradox/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GCM Explorer</a><a href="https://wellytg.github.io/soc-paradox/research_artifacts/Preliminary%20%20full%20matrix/SOC_T1_Agreement_Dashboard.html" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">LLM Agreement</a></div>
 						</div>
 					</div>
 
 					<div class="project-card">
-						<div class="card-head">
-							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-bank"></use></svg></span>
-							<div class="card-heading">
-								<h3>Transactor — Financial Transaction Tools</h3>
-								<span class="status status--success">Live</span>
-							</div>
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-chip"></use></svg></span>
+							<div class="tile-ttl"><h3>Sensei</h3><span class="chips"><span class="chip">Hacklahoma 2026</span></span></div>
 						</div>
-						<p>Series of financial transaction tools evolved across three versions, supporting Zimbabwe-context financial calculations and currency management.</p>
-						<div class="project-tech">
-							<span class="tech-tag">JavaScript</span>
-							<span class="tech-tag">Finance</span>
+						<p class="tile-sum">Multi-agent AI coaching app from a 4-person team in 22 hours at Hacklahoma 2026.</p>
+						<div class="tile-ft">
+							<span class="tile-tags">Claude Sonnet API · TanStack Start · Cloudflare Workers · D1/SQLite</span>
+							<span class="tile-ln"><a href="https://devpost.com/software/project-sensei" target="_blank" rel="noopener noreferrer" class="tile-link">Devpost</a><button type="button" class="tile-more" popovertarget="pd-sensei">Details</button></span>
 						</div>
-						<div class="project-links">
-							<a href="https://wellytg.github.io/Transactor/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">v1</a>
-							<a href="https://wellytg.github.io/TransactorZWE/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">v2</a>
-							<a href="https://wellytg.github.io/TransactorZWEv3/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">v3</a>
+						<div id="pd-sensei" class="pd" popover>
+							<div class="pd-hd"><h3>Sensei — Multi-Agent AI Coaching Platform</h3><button type="button" class="pd-x" popovertarget="pd-sensei" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip">Hacklahoma 2026</span></div>
+							<p>Built and deployed a multi-agent AI coaching app in 22 hours as part of a 4-person team at Hacklahoma 2026 (Feb 2026), using Claude Sonnet API (Coach and Reflection agents with tool-use loops), TanStack Start, Cloudflare Workers, D1/SQLite, Drizzle ORM, Google Calendar API, and Google OAuth.</p>
+							<div class="project-tech"><span class="tech-tag">Claude Sonnet API</span><span class="tech-tag">TanStack Start</span><span class="tech-tag">Cloudflare Workers</span><span class="tech-tag">D1/SQLite</span></div>
+							<div class="project-links"><a href="https://devpost.com/software/project-sensei" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Devpost</a></div>
 						</div>
 					</div>
 
-				</div>
-			</div>
-		</section>
+					<div class="project-card">
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg></span>
+							<div class="tile-ttl"><h3>DigiVault</h3><span class="chips"><span class="chip">Live</span></span></div>
+						</div>
+						<p class="tile-sum">OSINT profile construction and breach detection, Hurricane Hackathon 2026.</p>
+						<div class="tile-ft">
+							<span class="tile-tags">Vanilla JS · OSINT · Security Recon</span>
+							<span class="tile-ln"><a href="https://wellytg.github.io/digivault/" target="_blank" rel="noopener noreferrer" class="tile-link">Live Demo</a><button type="button" class="tile-more" popovertarget="pd-digivault">Details</button></span>
+						</div>
+						<div id="pd-digivault" class="pd" popover>
+							<div class="pd-hd"><h3>DigiVault — AI Security Recon</h3><button type="button" class="pd-x" popovertarget="pd-digivault" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip">Live</span></div>
+							<p>AI-powered automated public profile construction and breach detection platform. Built for Hurricane Hackathon 2026 using Vanilla JS. Features real-time OSINT aggregation and breach analysis.</p>
+							<div class="project-tech"><span class="tech-tag">Vanilla JS</span><span class="tech-tag">OSINT</span><span class="tech-tag">Security Recon</span></div>
+							<div class="project-links"><a href="https://wellytg.github.io/digivault/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Live Demo</a><a href="https://wellytg.github.io/digivault/presentation.html" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Presentation Deck</a></div>
+						</div>
+					</div>
 
-		<!-- Skills Section -->
-		<section id="skills" class="skills">
-			<div class="container">
-				<h2 class="section-title">Skills &amp; Expertise</h2>
-				<div class="skills-content">
-					<div class="skills-category">
-						<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg><span>Security Operations</span></h3>
-						<div class="skills-list">
-							<div class="skill-item">SIEM Deployment</div>
-							<div class="skill-item">Detection Engineering</div>
-							<div class="skill-item">Alert Triage</div>
-							<div class="skill-item">Log Enrichment</div>
-							<div class="skill-item">Incident Response</div>
-							<div class="skill-item">Security Automation</div>
-							<div class="skill-item">SOC Metrics</div>
-							<div class="skill-item">Threat Intelligence</div>
+					<div class="project-card">
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-school"></use></svg></span>
+							<div class="tile-ttl"><h3>ASPIRE AI Workshop</h3><span class="chips"><span class="chip">1st Place</span></span></div>
+						</div>
+						<p class="tile-sum">Adult skills platform; first place in the ASPIRE AI business challenge.</p>
+						<div class="tile-ft">
+							<span class="tile-tags">Lovable.dev · EdTech · AI</span>
+							<span class="tile-ln"><a href="https://rise-up-launchpad.lovable.app/" target="_blank" rel="noopener noreferrer" class="tile-link">Live Site</a><button type="button" class="tile-more" popovertarget="pd-aspire-ai-workshop">Details</button></span>
+						</div>
+						<div id="pd-aspire-ai-workshop" class="pd" popover>
+							<div class="pd-hd"><h3>ASPIRE AI Workshop — Rise-up Learning Hub</h3><button type="button" class="pd-x" popovertarget="pd-aspire-ai-workshop" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip">1st Place</span></div>
+							<p>Adult education and skills development platform built for the ASPIRE AI business challenge using Lovable.dev. Won first place in the business challenge.</p>
+							<div class="project-tech"><span class="tech-tag">Lovable.dev</span><span class="tech-tag">EdTech</span><span class="tech-tag">AI</span></div>
+							<div class="project-links"><a href="https://rise-up-launchpad.lovable.app/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Live Site</a></div>
 						</div>
 					</div>
-					<div class="skills-category">
-						<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-servers"></use></svg><span>Tools &amp; Platforms</span></h3>
-						<div class="skills-list">
-							<div class="skill-item">Cribl Stream (L2)</div>
-							<div class="skill-item">Elastic Stack (ELK)</div>
-							<div class="skill-item">Wazuh (HIDS/EDR)</div>
-							<div class="skill-item">Elastic Agent</div>
-							<div class="skill-item">CISA LME</div>
-							<div class="skill-item">MITRE ATT&amp;CK</div>
-							<div class="skill-item">MITRE D3FEND</div>
-							<div class="skill-item">NIST CSF</div>
-							<div class="skill-item">CIS Controls</div>
-							<div class="skill-item">SentinelOne (hands-on)</div>
-							<div class="skill-item">Varonis (hands-on)</div>
-							<div class="skill-item">Splunk (workshop-level)</div>
-							<div class="skill-item">AWS Cloud Foundations</div>
-						</div>
-					</div>
-					<div class="skills-category">
-						<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-chip"></use></svg><span>AI Security &amp; Agentic Systems</span></h3>
-						<div class="skills-list">
-							<div class="skill-item">Multi-agent AI architecture (Claude API)</div>
-							<div class="skill-item">Local LLMs: Ollama, DeepSeek-R1, Llama</div>
-							<div class="skill-item">LangChain (workshop-level, NVIDIA DLI)</div>
-							<div class="skill-item">MCP (Model Context Protocol)</div>
-						</div>
-					</div>
-					<div class="skills-category">
-						<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-code"></use></svg><span>Technical Stack</span></h3>
-						<div class="skills-list">
-							<div class="skill-item">Python</div>
-							<div class="skill-item">SQL</div>
-							<div class="skill-item">Linux</div>
-							<div class="skill-item">Docker</div>
-							<div class="skill-item">Git</div>
-							<div class="skill-item">JavaScript</div>
-							<div class="skill-item">Java</div>
-							<div class="skill-item">PowerShell</div>
-						</div>
-					</div>
-					<div class="skills-category">
-						<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><span>Certifications</span></h3>
-						<div class="certifications-list">
-							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>ISC2 Certified in Cybersecurity (CC), active through Aug 2028</h4></div>
-							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Cribl Certified Admin — Stream (Level 2)</h4></div>
-							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Cribl Certified User (Level 1)</h4></div>
-							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Google Cybersecurity Professional Certificate V2</h4></div>
-							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Google AI Professional Certificate (Jul 2026)</h4></div>
-							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>AI for App Deployment, Google (Aug 2026)</h4></div>
-							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Building LLM Applications With Prompt Engineering, NVIDIA Deep Learning Institute (Sep 2026)</h4></div>
-						</div>
-						<h3 class="training-heading"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-school"></use></svg><span>Training</span></h3>
-						<div class="certifications-list">
-							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>AWS Academy Graduate - Cloud Foundations - Training Badge (2022)</h4></div>
-						</div>
-					</div>
-				</div>
-			</div>
-		</section>
 
-		<!-- Community & Leadership Section -->
-		<section id="community" class="about">
-			<div class="container">
-				<h2 class="section-title">Community &amp; Leadership</h2>
-				<div class="research-grid">
-					<div class="research-card">
-						<h4>ISC2 Tulsa Metro Chapter</h4>
-						<p>Secretary — Feb 2026–Present</p>
+					<div class="project-card">
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-group"></use></svg></span>
+							<div class="tile-ttl"><h3>SPYN</h3><span class="chips"><span class="chip">Live</span></span></div>
+						</div>
+						<p class="tile-sum">Talent-matching MVP for the Hurricane Pitch competition.</p>
+						<div class="tile-ft">
+							<span class="tile-tags">Web App · Cloud Run · MVP</span>
+							<span class="tile-ln"><a href="https://spyn-smart-people-you-need-prototype-448474372841.us-west1.run.app/" target="_blank" rel="noopener noreferrer" class="tile-link">Live Prototype</a><button type="button" class="tile-more" popovertarget="pd-spyn">Details</button></span>
+						</div>
+						<div id="pd-spyn" class="pd" popover>
+							<div class="pd-hd"><h3>SPYN — Smart People You Need</h3><button type="button" class="pd-x" popovertarget="pd-spyn" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip">Live</span></div>
+							<p>Talent-matching MVP for Hurricane Pitch competition — connecting people to the right professionals on demand.</p>
+							<div class="project-tech"><span class="tech-tag">Web App</span><span class="tech-tag">Cloud Run</span><span class="tech-tag">MVP</span></div>
+							<div class="project-links"><a href="https://spyn-smart-people-you-need-prototype-448474372841.us-west1.run.app/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Live Prototype</a><a href="https://github.com/wellytg/SPYN" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a></div>
+						</div>
 					</div>
-					<div class="research-card">
-						<h4>NSBE (TU Chapter)</h4>
-						<p>Senator — Nov 2024–Present</p>
+
+					<div class="project-card">
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg></span>
+							<div class="tile-ttl"><h3>Screen Online</h3><span class="chips"><span class="chip">Published 2022</span></span></div>
+						</div>
+						<p class="tile-sum">Android online-safety apps for Childline Zimbabwe, on Google Play in 2022.</p>
+						<div class="tile-ft">
+							<span class="tile-tags">Android · Java · Edutainment</span>
+							<span class="tile-ln"><button type="button" class="tile-more" popovertarget="pd-screen-online">Details</button></span>
+						</div>
+						<div id="pd-screen-online" class="pd" popover>
+							<div class="pd-hd"><h3>Screen Online — Children's Digital Safety Apps</h3><button type="button" class="pd-x" popovertarget="pd-screen-online" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip">Published 2022</span></div>
+							<p>Series of Android edutainment apps educating children about online safety, developed for Childline Zimbabwe. Two versions (Tsuro in Digiland v1; Agent Tsuro v2) were published on Google Play in 2022.</p>
+							<div class="project-tech"><span class="tech-tag">Android</span><span class="tech-tag">Java</span><span class="tech-tag">Edutainment</span></div>
+						</div>
 					</div>
-					<div class="research-card">
-						<h4>Graduate Student Association (TU)</h4>
-						<p>Event Coordinator (Executive) — Jul 2026–Present</p>
-						<p>Senator, Cyber Studies — Aug 2025–May 2026</p>
+
+					<div class="project-card">
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-code"></use></svg></span>
+							<div class="tile-ttl"><h3>Hacklahoma Dream Team</h3><span class="chips"><span class="chip">Hackathon</span></span></div>
+						</div>
+						<p class="tile-sum">Team full-stack TypeScript project from Hacklahoma.</p>
+						<div class="tile-ft">
+							<span class="tile-tags">TypeScript · Hackathon</span>
+							<span class="tile-ln"><a href="https://github.com/wellytg/hacklahoma-dream-team" target="_blank" rel="noopener noreferrer" class="tile-link">GitHub</a><button type="button" class="tile-more" popovertarget="pd-hacklahoma-dream-team">Details</button></span>
+						</div>
+						<div id="pd-hacklahoma-dream-team" class="pd" popover>
+							<div class="pd-hd"><h3>Hacklahoma Dream Team</h3><button type="button" class="pd-x" popovertarget="pd-hacklahoma-dream-team" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip">Hackathon</span></div>
+							<p>Team hackathon project from Hacklahoma — collaborative full-stack development with TypeScript.</p>
+							<div class="project-tech"><span class="tech-tag">TypeScript</span><span class="tech-tag">Hackathon</span></div>
+							<div class="project-links"><a href="https://github.com/wellytg/hacklahoma-dream-team" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a></div>
+						</div>
 					</div>
-					<div class="research-card">
-						<h4>TU Cyber Fellow</h4>
-						<p>2023–Present</p>
+
+					<div class="project-card">
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-bolt"></use></svg></span>
+							<div class="tile-ttl"><h3>Solar Calculator</h3><span class="chips"><span class="chip">Live</span></span></div>
+						</div>
+						<p class="tile-sum">Panel, battery and cost sizing for solar systems.</p>
+						<div class="tile-ft">
+							<span class="tile-tags">JavaScript · Utility</span>
+							<span class="tile-ln"><a href="https://wellytg.github.io/SolarCalculator/" target="_blank" rel="noopener noreferrer" class="tile-link">Launch Tool</a><button type="button" class="tile-more" popovertarget="pd-solar-calculator">Details</button></span>
+						</div>
+						<div id="pd-solar-calculator" class="pd" popover>
+							<div class="pd-hd"><h3>Solar Calculator</h3><button type="button" class="pd-x" popovertarget="pd-solar-calculator" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip">Live</span></div>
+							<p>A utility tool for calculating solar energy requirements — panel sizing, battery capacity, and system cost estimation.</p>
+							<div class="project-tech"><span class="tech-tag">JavaScript</span><span class="tech-tag">Utility</span></div>
+							<div class="project-links"><a href="https://wellytg.github.io/SolarCalculator/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Launch Tool</a></div>
+						</div>
 					</div>
-					<div class="research-card">
-						<h4>Zimbabwe Institute of Engineers</h4>
-						<p>Corporate Member — 2018–Present</p>
+
+					<div class="project-card">
+						<div class="tile-hd">
+							<span class="tile-ic"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-bank"></use></svg></span>
+							<div class="tile-ttl"><h3>Transactor</h3><span class="chips"><span class="chip">Live</span></span></div>
+						</div>
+						<p class="tile-sum">Zimbabwe-context financial transaction tools, three versions.</p>
+						<div class="tile-ft">
+							<span class="tile-tags">JavaScript · Finance</span>
+							<span class="tile-ln"><a href="https://wellytg.github.io/Transactor/" target="_blank" rel="noopener noreferrer" class="tile-link">v1</a><button type="button" class="tile-more" popovertarget="pd-transactor">Details</button></span>
+						</div>
+						<div id="pd-transactor" class="pd" popover>
+							<div class="pd-hd"><h3>Transactor — Financial Transaction Tools</h3><button type="button" class="pd-x" popovertarget="pd-transactor" popovertargetaction="hide" aria-label="Close details">×</button></div>
+							<div class="pd-status"><span class="chip">Live</span></div>
+							<p>Series of financial transaction tools evolved across three versions, supporting Zimbabwe-context financial calculations and currency management.</p>
+							<div class="project-tech"><span class="tech-tag">JavaScript</span><span class="tech-tag">Finance</span></div>
+							<div class="project-links"><a href="https://wellytg.github.io/Transactor/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">v1</a><a href="https://wellytg.github.io/TransactorZWE/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">v2</a><a href="https://wellytg.github.io/TransactorZWEv3/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">v3</a></div>
+						</div>
 					</div>
-					<div class="research-card">
-						<h4>Meta Global AI Developer Hackathon</h4>
-						<p>Indie track, 2026: designed and directed Shadowfenced</p>
-					</div>
-					<div class="research-card">
-						<h4>IBM TechXchange 2026 Dev Day Hackathon</h4>
-						<p>2026: designed and directed Context Forge</p>
-					</div>
-					<div class="research-card">
-						<h4>Global Game Jam</h4>
-						<p>Participant — 2025 &amp; 2026</p>
+
 					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Resume Assistant (rule-based, runs in the browser; see assistant.js) -->
-		<section id="assistant" class="assistant">
-			<div class="container">
-				<h2 class="section-title">Resume Assistant</h2>
-				<div class="assistant-panel">
-					<p class="assistant-label">Resume assistant: answers only from my resume and skills record, including what I am still learning. It is rule-based, not an AI model, and nothing you type leaves this page.</p>
-					<form id="assistant-form" class="assistant-form" autocomplete="off">
-						<label for="assistant-input" class="sr-only">Ask a question about my resume</label>
-						<input type="text" id="assistant-input" class="form-control" maxlength="300" placeholder="e.g. Has Wellington led a team?" />
-						<button type="submit" class="btn btn--primary">Ask</button>
-					</form>
-					<div id="assistant-suggestions" class="assistant-suggestions" aria-label="Suggested questions"></div>
-					<div id="assistant-answer" class="assistant-answer" aria-live="polite"></div>
+			<!-- Skills Section -->
+			<section id="skills" class="sec ch">
+				<div class="in">
+					<div class="sec-hd"><h2><span>05</span>Skills &amp; Expertise</h2><span class="lbl">hands-on / workshop-level as stated in the resume</span></div>
+					<div class="skills-content">
+						<div class="skills-category">
+							<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg><span>Security Operations</span></h3>
+							<div class="skills-list">
+								<div class="skill-item">SIEM Deployment</div>
+								<div class="skill-item">Detection Engineering</div>
+								<div class="skill-item">Alert Triage</div>
+								<div class="skill-item">Log Enrichment</div>
+								<div class="skill-item">Incident Response</div>
+								<div class="skill-item">Security Automation</div>
+								<div class="skill-item">SOC Metrics</div>
+								<div class="skill-item">Threat Intelligence</div>
+							</div>
+						</div>
+						<div class="skills-category">
+							<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-servers"></use></svg><span>Tools &amp; Platforms</span></h3>
+							<div class="skills-list">
+								<div class="skill-item">Cribl Stream (L2)</div>
+								<div class="skill-item">Elastic Stack (ELK)</div>
+								<div class="skill-item">Wazuh (HIDS/EDR)</div>
+								<div class="skill-item">Elastic Agent</div>
+								<div class="skill-item">CISA LME</div>
+								<div class="skill-item">MITRE ATT&amp;CK</div>
+								<div class="skill-item">MITRE D3FEND</div>
+								<div class="skill-item">NIST CSF</div>
+								<div class="skill-item">CIS Controls</div>
+								<div class="skill-item">SentinelOne (hands-on)</div>
+								<div class="skill-item">Varonis (hands-on)</div>
+								<div class="skill-item">Splunk (workshop-level)</div>
+								<div class="skill-item">AWS Cloud Foundations</div>
+							</div>
+						</div>
+						<div class="skills-category">
+							<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-chip"></use></svg><span>AI Security &amp; Agentic Systems</span></h3>
+							<div class="skills-list">
+								<div class="skill-item">Multi-agent AI architecture (Claude API)</div>
+								<div class="skill-item">Local LLMs: Ollama, DeepSeek-R1, Llama</div>
+								<div class="skill-item">LangChain (workshop-level, NVIDIA DLI)</div>
+								<div class="skill-item">MCP (Model Context Protocol)</div>
+							</div>
+						</div>
+						<div class="skills-category">
+							<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-code"></use></svg><span>Technical Stack</span></h3>
+							<div class="skills-list">
+								<div class="skill-item">Python</div>
+								<div class="skill-item">SQL</div>
+								<div class="skill-item">Linux</div>
+								<div class="skill-item">Docker</div>
+								<div class="skill-item">Git</div>
+								<div class="skill-item">JavaScript</div>
+								<div class="skill-item">Java</div>
+								<div class="skill-item">PowerShell</div>
+							</div>
+						</div>
+						<div class="skills-category">
+							<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><span>Certifications</span></h3>
+							<div class="certifications-list">
+								<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>ISC2 Certified in Cybersecurity (CC), active through Aug 2028</h4></div>
+								<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Cribl Certified Admin — Stream (Level 2)</h4></div>
+								<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Cribl Certified User (Level 1)</h4></div>
+								<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Google Cybersecurity Professional Certificate V2</h4></div>
+								<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Google AI Professional Certificate (Jul 2026)</h4></div>
+								<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>AI for App Deployment, Google (Aug 2026)</h4></div>
+								<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Building LLM Applications With Prompt Engineering, NVIDIA Deep Learning Institute (Sep 2026)</h4></div>
+							</div>
+							<h3 class="training-heading"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-school"></use></svg><span>Training</span></h3>
+							<div class="certifications-list">
+								<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>AWS Academy Graduate - Cloud Foundations - Training Badge (2022)</h4></div>
+							</div>
+						</div>
+					</div>
 				</div>
-			</div>
-		</section>
+			</section>
 
-		<!-- Contact Section -->
-		<!-- RESTORED 2026-10-30 (Will): email, LinkedIn, GitHub and Credly are public again. Location unmuted 2026-11-11 (Will) as "Tulsa, OK" to match the assistant. The contact form stays muted. -->
-		<section id="contact" class="contact">
-			<div class="container">
-				<h2 class="section-title">Get In Touch</h2>
-				<div class="contact-content contact-content--single">
+			<!-- Community & Leadership Section -->
+			<section id="community" class="sec ch">
+				<div class="in">
+					<div class="sec-hd"><h2><span>06</span>Community &amp; Leadership</h2></div>
+					<div class="community-grid">
+						<div class="research-card">
+							<h4>ISC2 Tulsa Metro Chapter</h4>
+							<p>Secretary — Feb 2026–Present</p>
+						</div>
+						<div class="research-card">
+							<h4>NSBE (TU Chapter)</h4>
+							<p>Senator — Nov 2024–Present</p>
+						</div>
+						<div class="research-card">
+							<h4>Graduate Student Association (TU)</h4>
+							<p>Event Coordinator (Executive) — Jul 2026–Present</p>
+							<p>Senator, Cyber Studies — Aug 2025–May 2026</p>
+						</div>
+						<div class="research-card">
+							<h4>TU Cyber Fellow</h4>
+							<p>2023–Present</p>
+						</div>
+						<div class="research-card">
+							<h4>Zimbabwe Institute of Engineers</h4>
+							<p>Corporate Member — 2018–Present</p>
+						</div>
+						<div class="research-card">
+							<h4>Meta Global AI Developer Hackathon</h4>
+							<p>Indie track, 2026: designed and directed Shadowfenced</p>
+						</div>
+						<div class="research-card">
+							<h4>IBM TechXchange 2026 Dev Day Hackathon</h4>
+							<p>2026: designed and directed Context Forge</p>
+						</div>
+						<div class="research-card">
+							<h4>Global Game Jam</h4>
+							<p>Participant — 2025 &amp; 2026</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<!-- Contact Section -->
+			<!-- RESTORED 2026-10-30 (Will): email, LinkedIn, GitHub and Credly are public again. Location unmuted 2026-11-11 (Will) as "Tulsa, OK" to match the assistant. The contact form stays muted. -->
+			<section id="contact" class="sec ch">
+				<div class="in">
+					<div class="sec-hd"><h2><span>07</span>Get In Touch</h2></div>
 					<div class="contact-info">
-						<h3>Contact Information</h3>
 						<div class="contact-item"><strong>Email:</strong> <a href="mailto:wellington-gwavava@utulsa.edu">wellington-gwavava@utulsa.edu</a></div>
 						<div class="contact-item"><strong>Location:</strong> Tulsa, OK</div>
 						<div class="social-links-contact">
-							<a href="mailto:wellington-gwavava@utulsa.edu" class="btn btn--outline btn--icon"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg><span>Email</span></a>
-							<a href="https://www.linkedin.com/in/wellingtongwavava" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--icon"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg><span>LinkedIn</span></a>
-							<a href="https://github.com/wellytg" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--icon"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg><span>GitHub</span></a>
-							<a href="https://www.credly.com/users/wellington-gwavava/badges" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--icon"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><span>Credly</span></a>
+							<a href="mailto:wellington-gwavava@utulsa.edu" class="b b--icon"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg><span>Email</span></a>
+							<a href="https://www.linkedin.com/in/wellingtongwavava" target="_blank" rel="noopener noreferrer" class="b b--icon"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg><span>LinkedIn</span></a>
+							<a href="https://github.com/wellytg" target="_blank" rel="noopener noreferrer" class="b b--icon"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg><span>GitHub</span></a>
+							<a href="https://www.credly.com/users/wellington-gwavava/badges" target="_blank" rel="noopener noreferrer" class="b b--icon"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><span>Credly</span></a>
 						</div>
 					</div>
 					<!-- MUTED 2026-08-18 (kept muted 2026-10-30): contact form.
@@ -712,14 +691,11 @@
 					</div>
 					-->
 				</div>
-			</div>
-		</section>
+			</section>
+		</main>
 
-		<!-- Footer -->
 		<footer class="footer">
-			<div class="container">
-				<p>&copy; 2026 Wellington. All rights reserved. &nbsp;|&nbsp; <a href="architecture.html">Workspace Architecture</a> &nbsp;|&nbsp; <a href="bloghome.html">Blog</a></p>
-			</div>
+			<p>&copy; 2026 Wellington. All rights reserved. &nbsp;|&nbsp; <a href="architecture.html">Workspace Architecture</a> &nbsp;|&nbsp; <a href="bloghome.html">Blog</a></p>
 		</footer>
 
 		<script src="app.js"></script>
@@ -731,6 +707,11 @@
 					var subjectField = document.getElementById('subject');
 					if (subjectField) { subjectField.value = 'CV Request'; }
 				});
+			}
+			// Browsers without the Popover API show each project's details inline under its tile.
+			if (!HTMLElement.prototype.hasOwnProperty('popover')) {
+				document.documentElement.classList.add('no-popover');
+				document.querySelectorAll('.pd[popover]').forEach(function (p) { p.removeAttribute('popover'); });
 			}
 		</script>
 	</body>

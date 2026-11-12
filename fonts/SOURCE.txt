@@ -1,0 +1,16 @@
+Fonts for wellytg.github.io (copied 2026-11-12, d05 round 7, with root's approval).
+Source: C:\Core_Workspace\_SYSTEM\DEV\domain_dashboard\fonts\ (see README.txt, copied unchanged from there).
+IBM Plex Sans and JetBrains Mono are one variable font each. The source folder holds identical copies
+under each weight name, so this folder ships one file per family and style.css declares a weight range:
+  ibm-plex-sans.woff2   = ibm-plex-sans-400/500/600.woff2  (font-weight 400 600)
+  jetbrains-mono.woff2  = jetbrains-mono-400/500.woff2     (font-weight 400 500)
+SHA-256 of the files in this folder:
+  36ad966cb653de70ba37355c41003b02de8940b2df6cbcd46480a6ad8cadd65d *chakra-petch-500.woff2
+  a5888696e9eb1b4bbbecc8eb3922b8369f49d4bddb72263e033cbd17f399be76 *chakra-petch-600.woff2
+  ce5095dc1cb200aaa939e38067a0677018d10e9f26ec38cdcf1557ac524fc775 *chakra-petch-700.woff2
+  e2291e842cf5af167122a22881a740c7f2dda7716f1e8cd76680264f4a859470 *ibm-plex-sans.woff2
+  83c005d49d8a6a50474c73a5a36ac0468076e9c4a29da7bdb14995d80560a5be *jetbrains-mono.woff2
+  13831d02389d917d22fcfa6c79f98f8acbf61d230add0e73a4d4dc5f3bfb9e56 *OFL-ChakraPetch.txt
+  7e6b2818edbd8f6a01ae80641cc8f16a51080d08fb4e532be3a0b6f74adb07da *OFL-IBMPlexSans.txt
+  b2fe5e8987594e9ffd1d2ca52a2f5d73eb8335243893c5d6254b5ad69269591d *OFL-JetBrainsMono.txt
+  ddcb8e676ee0db0b0fb3ccc0f601c6462a261a4fa7442422cc8039022aa960d3 *README.txt
