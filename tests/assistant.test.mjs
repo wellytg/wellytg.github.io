@@ -62,7 +62,11 @@ const supported = [
 	{ q: 'Tell me about Shadowfenced', topic: 'shadowfenced', expect: ['Meta Global AI Developer Hackathon (Indie track), 2026: designed and directed Shadowfenced, a local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents.', 'github.com/wellytg/meta-hackathon-shadowfenced'] },
 	{ q: 'What did he build at the Meta hackathon?', topic: 'shadowfenced', expect: ['Shadowfenced'] },
 	{ q: 'What did he build at Hacklahoma?', topic: 'sensei', expect: ['Sensei'] },
-	{ q: 'What projects has he built?', topic: 'projects', expect: ['Shadowfenced', 'Sensei'] },
+	{ q: 'What projects has he built?', topic: 'projects', expect: ['Shadowfenced', 'Context Forge', 'Sensei'] },
+	// IBM hackathon (Will, 2026-11-11: option A wording verbatim, public repo link)
+	{ q: 'Tell me about Context Forge', topic: 'context-forge', expect: ['IBM TechXchange 2026 Dev Day Hackathon, 2026: designed and directed Context Forge, a role-bounded fleet security agent whose two independent gates stop device updates from escalating privileges.', 'github.com/wellytg/context-forge-hackathon'] },
+	{ q: 'What did he do at the IBM hackathon?', topic: 'context-forge', expect: ['Context Forge'] },
+	{ q: 'What hackathons has he done?', topic: 'projects', expect: ['Shadowfenced', 'Context Forge'] },
 	// Soft skills from resume evidence
 	{ q: 'Is he a good communicator?', topic: 'communication', expect: ['CISO and SOC leadership', '18 subjects'] },
 	{ q: 'Is he a team player?', topic: 'teamwork', expect: ['4-person team'] },
@@ -271,8 +275,8 @@ check('no fact names held or private items (old project name, application log, p
 });
 
 check('hackathon facts state no competition result', () => {
-	const hackathonText = allFactText.filter((t) => /shadowfenced|meta global ai/i.test(t));
-	assert.ok(hackathonText.length >= 2, 'hackathon facts missing');
+	const hackathonText = allFactText.filter((t) => /shadowfenced|meta global ai|context.?forge|techxchange/i.test(t));
+	assert.ok(hackathonText.length >= 4, 'hackathon facts missing');
 	for (const t of hackathonText) assert.ok(!/finalist|\bfinals?\b|winner|\bwon\b|runner.?up|\bplaced\b|\bplace\b|\bprize\b|\baward/i.test(t), t);
 });
 
@@ -286,10 +290,28 @@ check('hackathon wording says designed and directed, never "built" or "covert-eg
 	assert.ok(allFactText.some((t) => t.includes('Meta Global AI Developer Hackathon (Indie track), 2026: designed and directed Shadowfenced, a local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents.')), 'final line missing');
 });
 
+// Context Forge (Will, 2026-11-11, option A; register v2_26 projects[9]): IBM Bob wrote
+// the code, so never built/wrote/coded; no result recorded and no track recorded.
+const CONTEXT_FORGE_LINE = 'IBM TechXchange 2026 Dev Day Hackathon, 2026: designed and directed Context Forge, a role-bounded fleet security agent whose two independent gates stop device updates from escalating privileges.';
+check('Context Forge wording is verbatim, designed and directed, with no build, track or result words', () => {
+	const pieces = allFactText.flatMap((t) => t.split(/\n|(?<=\.)\s+/)).filter((p) => /context.?forge|techxchange|\bibm\b/i.test(p));
+	assert.ok(pieces.length >= 5, 'Context Forge sentences missing');
+	for (const p of pieces) {
+		assert.ok(!/\bbuilt\b|\bbuild\b|\bwrote\b|\bwritten\b|\bcoded\b/i.test(p), p);
+		assert.ok(!/\btrack\b/i.test(p), `track wording: ${p}`);
+		assert.ok(!/finalist|\bfinals?\b|winner|\bwon\b|runner.?up|\bplaced\b|\bplace\b|\bprize\b|\baward|139/i.test(p), `result wording: ${p}`);
+	}
+	assert.ok(allFactText.some((t) => t.includes(CONTEXT_FORGE_LINE)), 'chosen line missing');
+});
+
 check('site HTML uses the final hackathon wording only', () => {
 	const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
 	assert.ok(html.includes('designed and directed Shadowfenced, a local AI egress guard'), 'final line missing from index.html');
 	assert.ok(!/built Shadowfenced|covert.?egress|tripwire/i.test(html), 'old wording in index.html');
+	assert.ok(html.includes(CONTEXT_FORGE_LINE), 'Context Forge line missing from index.html');
+	const cfBlocks = html.split(/<div class="(?:project|research)-card">/).filter((b) => /context.?forge|techxchange/i.test(b));
+	assert.equal(cfBlocks.length, 2, 'expected a Projects card and a Community card for Context Forge');
+	for (const b of cfBlocks) assert.ok(!/\bbuilt\b|\bwrote\b|\bcoded\b|\btrack\b|finalist|winner|\bprize\b/i.test(b), b);
 });
 
 check('do-not-claim items are never stated as experience', () => {

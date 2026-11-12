@@ -8,7 +8,7 @@
  * follow-up suggestions.
  *
  * Grounding: every topic lists `refs` into the canonical skills register
- * (07_Job_Application_Pipeline master_skill_register_v2_25.json, read-only)
+ * (07_Job_Application_Pipeline master_skill_register_v2_26.json, read-only)
  * and is worded from the October 2026 web resume
  * (assets/Wellington_Gwavava_Resume.pdf) where the resume covers it.
  * `onResume: false` marks topics drawn from the register only. Skill-gap
@@ -288,14 +288,14 @@
 			keys: [['project', 4], ['portfolio', 4], ['hackathon', 3], ['built', 3], ['build', 2], ['side project', 4], ['repo', 2], ['made', 1]],
 			examples: ['what projects has he built', 'what ai projects has he built', 'show me his portfolio', 'list his projects'],
 			say: [
-				'His main projects:\n- CISA LME operational SOC deployment (adopted as the SOC standard)\n- SOC-Job-Task-Analyzer: agentic LLM pipeline, greater than 85 percent cross-model agreement on 49 job descriptions\n- Shadowfenced: local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents (designed and directed; Meta Global AI Developer Hackathon, Indie track, 2026)\n- Sensei: multi-agent AI coaching app, built in 22 hours at Hacklahoma 2026\n- DigiVault: automated OSINT and breach analysis (Hurricane Hackathon 2026)\n- SOC Strategic Alignment Simulator and GCM Explorer (PhD research)',
-				'The AI-heavy ones are SOC-Job-Task-Analyzer (an agentic LLM research pipeline), Shadowfenced (a local AI egress guard he designed and directed at the Meta Global AI Developer Hackathon in 2026), Sensei (a two-agent Claude API app shipped in 22 hours) and DigiVault (OSINT exposure scoring with Claude-powered recommendations). On the operations side, the CISA LME deployment; on the research side, the SOC Strategic Alignment Simulator.'
+				'His main projects:\n- CISA LME operational SOC deployment (adopted as the SOC standard)\n- SOC-Job-Task-Analyzer: agentic LLM pipeline, greater than 85 percent cross-model agreement on 49 job descriptions\n- Shadowfenced: local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents (designed and directed; Meta Global AI Developer Hackathon, Indie track, 2026)\n- Context Forge: role-bounded fleet security agent whose two independent gates stop device updates from escalating privileges (designed and directed; IBM TechXchange 2026 Dev Day Hackathon)\n- Sensei: multi-agent AI coaching app, built in 22 hours at Hacklahoma 2026\n- DigiVault: automated OSINT and breach analysis (Hurricane Hackathon 2026)\n- SOC Strategic Alignment Simulator and GCM Explorer (PhD research)',
+				'The AI-heavy ones are SOC-Job-Task-Analyzer (an agentic LLM research pipeline), Shadowfenced (a local AI egress guard he designed and directed at the Meta Global AI Developer Hackathon in 2026), Context Forge (a role-bounded fleet security agent he designed and directed at the IBM TechXchange 2026 Dev Day Hackathon), Sensei (a two-agent Claude API app shipped in 22 hours) and DigiVault (OSINT exposure scoring with Claude-powered recommendations). On the operations side, the CISA LME deployment; on the research side, the SOC Strategic Alignment Simulator.'
 			],
-			next: ['Tell me about Shadowfenced', 'Tell me about Sensei', 'Tell me about SOC-Job-Task-Analyzer'],
-			refs: ['projects:CISA Logging Made Easy', 'projects:SOC-Job-Task-Analyzer', 'projects:Shadowfenced: Local AI Egress Guard', 'projects:Sensei', 'projects:DigiVault', 'projects:SOC Strategic Alignment Simulator'] },
+			next: ['Tell me about Shadowfenced', 'Tell me about Context Forge', 'Tell me about Sensei'],
+			refs: ['projects:CISA Logging Made Easy', 'projects:SOC-Job-Task-Analyzer', 'projects:Shadowfenced: Local AI Egress Guard', 'projects:Context Forge: Role-Bounded Fleet Security Agent', 'projects:Sensei', 'projects:DigiVault', 'projects:SOC Strategic Alignment Simulator'] },
 
 		// Final wording agreed by Will 2026-11-11 (round 2: "designed and directed", local AI egress guard).
-		// Register ref points at the v2_25 entry name (canonical 2026-11-11).
+		// Register ref points at the v2_25 entry name (canonical 2026-11-11; unchanged in v2_26).
 		{ id: 'shadowfenced', kind: 'fact', title: 'Shadowfenced (Meta Global AI Developer Hackathon 2026)', anchor: '#projects', onResume: false,
 			keys: [['shadowfenced', 7], ['shadow fenced', 7], ['meta', 5], ['meta hackathon', 7], ['egress', 6], ['covert', 5], ['exfiltration', 4], ['coding agent', 5], ['egress guard', 7], ['personal data', 3], ['indie', 3]],
 			examples: ['tell me about shadowfenced', 'what did he build at the meta hackathon', 'what is his ai agent egress project'],
@@ -305,6 +305,18 @@
 			],
 			next: ['What AI skills does he have?', 'What projects has he built?'],
 			refs: ['projects:Shadowfenced: Local AI Egress Guard', 'skills.cybersecurity_direct:AI Security'] },
+
+		// Wording chosen by Will 2026-11-11 (option A), used verbatim. Register v2_26 projects[9]:
+		// say "designed and directed", never built/wrote/coded; no result or track wording.
+		{ id: 'context-forge', kind: 'fact', title: 'Context Forge (IBM TechXchange 2026 Dev Day Hackathon)', anchor: '#projects', onResume: false,
+			keys: [['context forge', 8], ['forge', 5], ['ibm', 6], ['techxchange', 7], ['dev day', 5], ['fleet', 5], ['privilege escalation', 6], ['escalat', 3], ['least privilege', 5], ['role bounded', 6], ['device update', 5]],
+			examples: ['tell me about context forge', 'what did he do at the ibm hackathon', 'what is his fleet security project'],
+			say: [
+				'IBM TechXchange 2026 Dev Day Hackathon, 2026: designed and directed Context Forge, a role-bounded fleet security agent whose two independent gates stop device updates from escalating privileges. The code is public on GitHub: github.com/wellytg/context-forge-hackathon',
+				'Context Forge is his entry for the IBM TechXchange 2026 Dev Day Hackathon, which he designed and directed: a role-bounded fleet security agent whose two independent gates stop device updates from escalating privileges. Code: github.com/wellytg/context-forge-hackathon'
+			],
+			next: ['What AI skills does he have?', 'What projects has he built?'],
+			refs: ['projects:Context Forge: Role-Bounded Fleet Security Agent'] },
 
 		{ id: 'sensei', kind: 'fact', title: 'Sensei (Hacklahoma 2026)', anchor: '#projects', onResume: true,
 			keys: [['sensei', 6], ['hacklahoma', 6], ['multi agent', 4], ['coaching', 3], ['hackathon', 2]],
@@ -433,7 +445,7 @@
 			keys: [['community', 5], ['volunteer', 5], ['involvement', 4], ['extracurricular', 5], ['chapter', 3], ['nsbe', 5], ['gsa', 4], ['club', 3], ['organization', 3], ['member', 2], ['event', 2]],
 			examples: ['is he involved in the community', 'what organizations is he part of', 'does he volunteer'],
 			say: [
-				'Secretary, ISC2 Tulsa Metro Chapter (Feb 2026 - Present); Event Coordinator on the TU Graduate Student Association executive (Jul 2026 - Present); NSBE University of Tulsa Chapter Senator (since Nov 2024); and regular hackathons, including Hacklahoma 2026, the Meta Global AI Developer Hackathon (Indie track) 2026 and Global Game Jam 2025 and 2026. In Zimbabwe he served on the IndabaX-Zimbabwe organising committee in 2022 and 2023.',
+				'Secretary, ISC2 Tulsa Metro Chapter (Feb 2026 - Present); Event Coordinator on the TU Graduate Student Association executive (Jul 2026 - Present); NSBE University of Tulsa Chapter Senator (since Nov 2024); and regular hackathons, including Hacklahoma 2026, the Meta Global AI Developer Hackathon (Indie track) 2026 and Global Game Jam 2025 and 2026. He also took part in the IBM TechXchange 2026 Dev Day Hackathon. In Zimbabwe he served on the IndabaX-Zimbabwe organising committee in 2022 and 2023.',
 				'He is active in the Tulsa security community as Secretary of the ISC2 Tulsa Metro Chapter, and on campus through the Graduate Student Association executive and NSBE. He also attends BSidesOK and takes part in hackathons and game jams.'
 			],
 			next: ['Has he led a team?', 'What does he do for fun?'],
