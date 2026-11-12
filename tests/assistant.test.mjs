@@ -316,6 +316,16 @@ check('site HTML uses the final hackathon wording only', () => {
 	for (const b of cfBlocks) assert.ok(!/\bbuilt\b|\bwrote\b|\bcoded\b|\btrack\b|finalist|winner|\bprize\b/i.test(b), b);
 });
 
+check('site icons come from the sprite and the contact buttons carry one', () => {
+	const html = readFileSync(new URL('../index.html', import.meta.url), 'utf8');
+	const symbols = new Set([...html.matchAll(/<symbol id="([^"]+)" viewBox="0 0 24 24"/g)].map((m) => m[1]));
+	const uses = [...html.matchAll(/<use href="#([^"]+)"/g)].map((m) => m[1]);
+	assert.ok(uses.length > 0, 'no icons found');
+	for (const u of uses) assert.ok(symbols.has(u), 'missing symbol ' + u);
+	const contact = html.split('class="social-links-contact"')[1].split('</div>')[0];
+	for (const name of ['Email', 'LinkedIn', 'GitHub', 'Credly']) assert.ok(new RegExp('aria-hidden="true"[^>]*><use href="#i-[a-z]+"></use></svg><span>' + name + '</span>').test(contact), name + ' button has no icon');
+});
+
 check('do-not-claim items are never stated as experience', () => {
 	const claims = /\b(?:hands-on|experienced|expert|proficient) (?:with|in) (?:crowdstrike|hipaa|iso 27001|soc 2)\b/i;
 	for (const t of allFactText) assert.ok(!claims.test(t), t);

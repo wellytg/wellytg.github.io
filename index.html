@@ -26,6 +26,25 @@
 		</script>
 	</head>
 	<body>
+		<!-- Icon sprite (2026-11-12): one 24x24 viewBox, fill currentColor. LinkedIn/GitHub paths from the muted hero row; others Material Icons (Apache 2.0). -->
+		<svg xmlns="http://www.w3.org/2000/svg" style="display:none" aria-hidden="true">
+			<symbol id="i-linkedin" viewBox="0 0 24 24" fill="currentColor"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z" /></symbol>
+			<symbol id="i-github" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" /></symbol>
+			<symbol id="i-mail" viewBox="0 0 24 24" fill="currentColor"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" /></symbol>
+			<symbol id="i-verified" viewBox="0 0 24 24" fill="currentColor"><path d="M23 12l-2.44-2.79.34-3.69-3.61-.82-1.89-3.2L12 2.96 8.6 1.5 6.71 4.69 3.1 5.5l.34 3.7L1 12l2.44 2.79-.34 3.7 3.61.82L8.6 22.5l3.4-1.47 3.4 1.46 1.89-3.19 3.61-.82-.34-3.69L23 12zm-12.91 4.72l-3.8-3.81 1.48-1.48 2.32 2.33 5.85-5.87 1.48 1.48-7.33 7.35z" /></symbol>
+			<symbol id="i-shield" viewBox="0 0 24 24" fill="currentColor"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4z" /></symbol>
+			<symbol id="i-lock" viewBox="0 0 24 24" fill="currentColor"><path d="M18 8h-1V6c0-2.76-2.24-5-5-5S7 3.24 7 6v2H6c-1.1 0-2 .9-2 2v10c0 1.1.9 2 2 2h12c1.1 0 2-.9 2-2V10c0-1.1-.9-2-2-2zm-6 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zm3.1-9H8.9V6c0-1.71 1.39-3.1 3.1-3.1 1.71 0 3.1 1.39 3.1 3.1v2z" /></symbol>
+			<symbol id="i-search" viewBox="0 0 24 24" fill="currentColor"><path d="M15.5 14h-.79l-.28-.27A6.471 6.471 0 0016 9.5 6.5 6.5 0 109.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z" /></symbol>
+			<symbol id="i-chart" viewBox="0 0 24 24" fill="currentColor"><path d="M5 9.2h3V19H5zM10.6 5h2.8v14h-2.8zm5.6 8H19v6h-2.8z" /></symbol>
+			<symbol id="i-chip" viewBox="0 0 24 24" fill="currentColor"><path d="M15 9H9v6h6V9zm-2 4h-2v-2h2v2zm8-2V9h-2V7c0-1.1-.9-2-2-2h-2V3h-2v2h-2V3H9v2H7c-1.1 0-2 .9-2 2v2H3v2h2v2H3v2h2v2c0 1.1.9 2 2 2h2v2h2v-2h2v2h2v-2h2c1.1 0 2-.9 2-2v-2h2v-2h-2v-2h2zm-4 6H7V7h10v10z" /></symbol>
+			<symbol id="i-group" viewBox="0 0 24 24" fill="currentColor"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" /></symbol>
+			<symbol id="i-school" viewBox="0 0 24 24" fill="currentColor"><path d="M5 13.18v4L12 21l7-3.82v-4L12 17l-7-3.82zM12 3L1 9l11 6 9-4.91V17h2V9L12 3z" /></symbol>
+			<symbol id="i-code" viewBox="0 0 24 24" fill="currentColor"><path d="M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z" /></symbol>
+			<symbol id="i-phone" viewBox="0 0 24 24" fill="currentColor"><path d="M17 1.01L7 1c-1.1 0-2 .9-2 2v18c0 1.1.9 2 2 2h10c1.1 0 2-.9 2-2V3c0-1.1-.9-1.99-2-1.99zM17 19H7V5h10v14z" /></symbol>
+			<symbol id="i-bolt" viewBox="0 0 24 24" fill="currentColor"><path d="M11 21h-1l1-7H7.5c-.88 0-.33-.75-.31-.78C8.48 10.94 10.42 7.54 13.01 3h1l-1 7h3.51c.4 0 .62.19.4.66C12.97 17.55 11 21 11 21z" /></symbol>
+			<symbol id="i-bank" viewBox="0 0 24 24" fill="currentColor"><path d="M4 10v7h3v-7H4zm6 0v7h3v-7h-3zM2 22h19v-3H2v3zm14-12v7h3v-7h-3zm-4.5-9L2 6v2h19V6l-9.5-5z" /></symbol>
+			<symbol id="i-servers" viewBox="0 0 24 24" fill="currentColor"><path d="M20 13H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zM7 19c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2zM20 3H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM7 9c-1.1 0-2-.9-2-2s.9-2 2-2 2 .9 2 2-.9 2-2 2z" /></symbol>
+		</svg>
 		<!-- Navigation -->
 		<nav class="navbar" id="navbar">
 			<div class="nav-container">
@@ -262,7 +281,13 @@
 				<div class="projects-grid">
 
 					<div class="project-card">
-						<h3>CISA LME SOC Deployment</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg></span>
+							<div class="card-heading">
+								<h3>CISA LME SOC Deployment</h3>
+								<span class="status status--info">Active Research</span>
+							</div>
+						</div>
 						<p>Architected and deployed the full CISA Logging Made Easy stack — Cribl pipeline orchestration, Wazuh/Elastic Agent endpoint telemetry, and custom ELK dashboards targeting lateral movement and credential dumping detection. Foundation for PhD risk metrics research.</p>
 						<div class="project-tech">
 							<span class="tech-tag">Cribl</span>
@@ -270,11 +295,16 @@
 							<span class="tech-tag">Wazuh</span>
 							<span class="tech-tag">MITRE ATT&CK</span>
 						</div>
-						<div class="project-status"><span class="status status--info">Active Research</span></div>
 					</div>
 
 					<div class="project-card">
-						<h3>DigiVault — AI Security Recon</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-search"></use></svg></span>
+							<div class="card-heading">
+								<h3>DigiVault — AI Security Recon</h3>
+								<span class="status status--success">Live</span>
+							</div>
+						</div>
 						<p>AI-powered automated public profile construction and breach detection platform. Built for Hurricane Hackathon 2026 using Vanilla JS. Features real-time OSINT aggregation and breach analysis.</p>
 						<div class="project-tech">
 							<span class="tech-tag">Vanilla JS</span>
@@ -285,11 +315,16 @@
 							<a href="https://wellytg.github.io/digivault/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Live Demo</a>
 							<a href="https://wellytg.github.io/digivault/presentation.html" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Presentation Deck</a>
 						</div>
-						<div class="project-status"><span class="status status--success">Live</span></div>
 					</div>
 
 					<div class="project-card">
-						<h3>SOC Strategic Alignment Simulator</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-chart"></use></svg></span>
+							<div class="card-heading">
+								<h3>SOC Strategic Alignment Simulator</h3>
+								<span class="status status--success">Live</span>
+							</div>
+						</div>
 						<p>Research simulation of the SOC Speed-Quality Paradox introducing the <strong>Goal-Coherence Matrix (GCM)</strong> framework to visualise misalignment between executive strategy and analyst incentives. Includes the GCM Explorer for interactive matrix analysis. Built with Vanilla JS and Firebase.</p>
 						<div class="project-tech">
 							<span class="tech-tag">Vanilla JS</span>
@@ -302,11 +337,16 @@
 							<a href="https://wellytg.github.io/soc-paradox/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GCM Explorer</a>
 							<a href="https://wellytg.github.io/soc-paradox/research_artifacts/Preliminary%20%20full%20matrix/SOC_T1_Agreement_Dashboard.html" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">LLM Agreement</a>
 						</div>
-						<div class="project-status"><span class="status status--success">Live</span></div>
 					</div>
 
 					<div class="project-card">
-						<h3>SOC-Job-Task-Analyzer</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-chip"></use></svg></span>
+							<div class="card-heading">
+								<h3>SOC-Job-Task-Analyzer</h3>
+								<span class="status status--info">PhD Research</span>
+							</div>
+						</div>
 						<p>Agentic LLM pipeline that extracts and classifies SOC analyst task duties from 49 job descriptions, with human-in-the-loop validation. Reached greater than 85 percent cross-model agreement as part of doctoral research on SOC goal incongruency.</p>
 						<div class="project-tech">
 							<span class="tech-tag">Agentic LLM Pipeline</span>
@@ -316,11 +356,16 @@
 						<div class="project-links">
 							<a href="https://github.com/wellytg/SOC-Job-Task-Analyzer" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a>
 						</div>
-						<div class="project-status"><span class="status status--info">PhD Research</span></div>
 					</div>
 
 					<div class="project-card">
-						<h3>SPYN — Smart People You Need</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-group"></use></svg></span>
+							<div class="card-heading">
+								<h3>SPYN — Smart People You Need</h3>
+								<span class="status status--success">Live</span>
+							</div>
+						</div>
 						<p>Talent-matching MVP for Hurricane Pitch competition — connecting people to the right professionals on demand.</p>
 						<div class="project-tech">
 							<span class="tech-tag">Web App</span>
@@ -331,11 +376,16 @@
 							<a href="https://spyn-smart-people-you-need-prototype-448474372841.us-west1.run.app/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Live Prototype</a>
 							<a href="https://github.com/wellytg/SPYN" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a>
 						</div>
-						<div class="project-status"><span class="status status--success">Live</span></div>
 					</div>
 
 					<div class="project-card">
-						<h3>ASPIRE AI Workshop — Rise-up Learning Hub</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-school"></use></svg></span>
+							<div class="card-heading">
+								<h3>ASPIRE AI Workshop — Rise-up Learning Hub</h3>
+								<span class="status status--success">1st Place</span>
+							</div>
+						</div>
 						<p>Adult education and skills development platform built for the ASPIRE AI business challenge using Lovable.dev. Won first place in the business challenge.</p>
 						<div class="project-tech">
 							<span class="tech-tag">Lovable.dev</span>
@@ -345,12 +395,17 @@
 						<div class="project-links">
 							<a href="https://rise-up-launchpad.lovable.app/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Live Site</a>
 						</div>
-						<div class="project-status"><span class="status status--success">1st Place</span></div>
 					</div>
 
 					<!-- Added 2026-11-11 (Will-approved final wording, round 2; no competition result stated) -->
 					<div class="project-card">
-						<h3>Shadowfenced — Local AI Egress Guard</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg></span>
+							<div class="card-heading">
+								<h3>Shadowfenced — Local AI Egress Guard</h3>
+								<span class="status status--info">Meta Hackathon 2026</span>
+							</div>
+						</div>
 						<p>Meta Global AI Developer Hackathon (Indie track), 2026: designed and directed Shadowfenced, a local AI egress guard that blocks secrets and personal data before they reach AI tools and coding agents.</p>
 						<div class="project-tech">
 							<span class="tech-tag">AI Security</span>
@@ -360,12 +415,17 @@
 						<div class="project-links">
 							<a href="https://github.com/wellytg/meta-hackathon-shadowfenced" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a>
 						</div>
-						<div class="project-status"><span class="status status--info">Meta Hackathon 2026</span></div>
 					</div>
 
 					<!-- Added 2026-11-11 (Will chose option A; wording verbatim; no result or track stated) -->
 					<div class="project-card">
-						<h3>Context Forge — Role-Bounded Fleet Security Agent</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-lock"></use></svg></span>
+							<div class="card-heading">
+								<h3>Context Forge — Role-Bounded Fleet Security Agent</h3>
+								<span class="status status--info">IBM Dev Day 2026</span>
+							</div>
+						</div>
 						<p>IBM TechXchange 2026 Dev Day Hackathon, 2026: designed and directed Context Forge, a role-bounded fleet security agent whose two independent gates stop device updates from escalating privileges.</p>
 						<div class="project-tech">
 							<span class="tech-tag">Python</span>
@@ -376,11 +436,16 @@
 							<a href="https://github.com/wellytg/context-forge-hackathon" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a>
 							<a href="https://youtu.be/z53_IAGWJXo" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Demo video</a>
 						</div>
-						<div class="project-status"><span class="status status--info">IBM Dev Day 2026</span></div>
 					</div>
 
 					<div class="project-card">
-						<h3>Sensei — Multi-Agent AI Coaching Platform</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-chip"></use></svg></span>
+							<div class="card-heading">
+								<h3>Sensei — Multi-Agent AI Coaching Platform</h3>
+								<span class="status status--info">Hacklahoma 2026</span>
+							</div>
+						</div>
 						<p>Built and deployed a multi-agent AI coaching app in 22 hours as part of a 4-person team at Hacklahoma 2026 (Feb 2026), using Claude Sonnet API (Coach and Reflection agents with tool-use loops), TanStack Start, Cloudflare Workers, D1/SQLite, Drizzle ORM, Google Calendar API, and Google OAuth.</p>
 						<div class="project-tech">
 							<span class="tech-tag">Claude Sonnet API</span>
@@ -391,11 +456,16 @@
 						<div class="project-links">
 							<a href="https://devpost.com/software/project-sensei" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">Devpost</a>
 						</div>
-						<div class="project-status"><span class="status status--info">Hacklahoma 2026</span></div>
 					</div>
 
 					<div class="project-card">
-						<h3>Hacklahoma Dream Team</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-code"></use></svg></span>
+							<div class="card-heading">
+								<h3>Hacklahoma Dream Team</h3>
+								<span class="status status--info">Hackathon</span>
+							</div>
+						</div>
 						<p>Team hackathon project from Hacklahoma — collaborative full-stack development with TypeScript.</p>
 						<div class="project-tech">
 							<span class="tech-tag">TypeScript</span>
@@ -404,22 +474,32 @@
 						<div class="project-links">
 							<a href="https://github.com/wellytg/hacklahoma-dream-team" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">GitHub</a>
 						</div>
-						<div class="project-status"><span class="status status--info">Hackathon</span></div>
 					</div>
 
 					<div class="project-card">
-						<h3>Screen Online — Children's Digital Safety Apps</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-phone"></use></svg></span>
+							<div class="card-heading">
+								<h3>Screen Online — Children's Digital Safety Apps</h3>
+								<span class="status status--info">Published 2022</span>
+							</div>
+						</div>
 						<p>Series of Android edutainment apps educating children about online safety, developed for Childline Zimbabwe. Two versions (Tsuro in Digiland v1; Agent Tsuro v2) were published on Google Play in 2022.</p>
 						<div class="project-tech">
 							<span class="tech-tag">Android</span>
 							<span class="tech-tag">Java</span>
 							<span class="tech-tag">Edutainment</span>
 						</div>
-						<div class="project-status"><span class="status status--info">Published 2022</span></div>
 					</div>
 
 					<div class="project-card">
-						<h3>Solar Calculator</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-bolt"></use></svg></span>
+							<div class="card-heading">
+								<h3>Solar Calculator</h3>
+								<span class="status status--success">Live</span>
+							</div>
+						</div>
 						<p>A utility tool for calculating solar energy requirements — panel sizing, battery capacity, and system cost estimation.</p>
 						<div class="project-tech">
 							<span class="tech-tag">JavaScript</span>
@@ -428,11 +508,16 @@
 						<div class="project-links">
 							<a href="https://wellytg.github.io/SolarCalculator/" target="_blank" rel="noopener noreferrer" class="btn btn--primary btn--sm">Launch Tool</a>
 						</div>
-						<div class="project-status"><span class="status status--success">Live</span></div>
 					</div>
 
 					<div class="project-card">
-						<h3>Transactor — Financial Transaction Tools</h3>
+						<div class="card-head">
+							<span class="card-icon"><svg class="icon icon--lg" aria-hidden="true" focusable="false"><use href="#i-bank"></use></svg></span>
+							<div class="card-heading">
+								<h3>Transactor — Financial Transaction Tools</h3>
+								<span class="status status--success">Live</span>
+							</div>
+						</div>
 						<p>Series of financial transaction tools evolved across three versions, supporting Zimbabwe-context financial calculations and currency management.</p>
 						<div class="project-tech">
 							<span class="tech-tag">JavaScript</span>
@@ -443,7 +528,6 @@
 							<a href="https://wellytg.github.io/TransactorZWE/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">v2</a>
 							<a href="https://wellytg.github.io/TransactorZWEv3/" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--sm">v3</a>
 						</div>
-						<div class="project-status"><span class="status status--success">Live</span></div>
 					</div>
 
 				</div>
@@ -456,7 +540,7 @@
 				<h2 class="section-title">Skills &amp; Expertise</h2>
 				<div class="skills-content">
 					<div class="skills-category">
-						<h3>Security Operations</h3>
+						<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-shield"></use></svg><span>Security Operations</span></h3>
 						<div class="skills-list">
 							<div class="skill-item">SIEM Deployment</div>
 							<div class="skill-item">Detection Engineering</div>
@@ -469,7 +553,7 @@
 						</div>
 					</div>
 					<div class="skills-category">
-						<h3>Tools &amp; Platforms</h3>
+						<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-servers"></use></svg><span>Tools &amp; Platforms</span></h3>
 						<div class="skills-list">
 							<div class="skill-item">Cribl Stream (L2)</div>
 							<div class="skill-item">Elastic Stack (ELK)</div>
@@ -487,7 +571,7 @@
 						</div>
 					</div>
 					<div class="skills-category">
-						<h3>AI Security &amp; Agentic Systems</h3>
+						<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-chip"></use></svg><span>AI Security &amp; Agentic Systems</span></h3>
 						<div class="skills-list">
 							<div class="skill-item">Multi-agent AI architecture (Claude API)</div>
 							<div class="skill-item">Local LLMs: Ollama, DeepSeek-R1, Llama</div>
@@ -496,7 +580,7 @@
 						</div>
 					</div>
 					<div class="skills-category">
-						<h3>Technical Stack</h3>
+						<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-code"></use></svg><span>Technical Stack</span></h3>
 						<div class="skills-list">
 							<div class="skill-item">Python</div>
 							<div class="skill-item">SQL</div>
@@ -509,19 +593,19 @@
 						</div>
 					</div>
 					<div class="skills-category">
-						<h3>Certifications</h3>
+						<h3><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><span>Certifications</span></h3>
 						<div class="certifications-list">
-							<div class="cert-item"><h4>ISC2 Certified in Cybersecurity (CC), active through Aug 2028</h4></div>
-							<div class="cert-item"><h4>Cribl Certified Admin — Stream (Level 2)</h4></div>
-							<div class="cert-item"><h4>Cribl Certified User (Level 1)</h4></div>
-							<div class="cert-item"><h4>Google Cybersecurity Professional Certificate V2</h4></div>
-							<div class="cert-item"><h4>Google AI Professional Certificate (Jul 2026)</h4></div>
-							<div class="cert-item"><h4>AI for App Deployment, Google (Aug 2026)</h4></div>
-							<div class="cert-item"><h4>Building LLM Applications With Prompt Engineering, NVIDIA Deep Learning Institute (Sep 2026)</h4></div>
+							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>ISC2 Certified in Cybersecurity (CC), active through Aug 2028</h4></div>
+							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Cribl Certified Admin — Stream (Level 2)</h4></div>
+							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Cribl Certified User (Level 1)</h4></div>
+							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Google Cybersecurity Professional Certificate V2</h4></div>
+							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Google AI Professional Certificate (Jul 2026)</h4></div>
+							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>AI for App Deployment, Google (Aug 2026)</h4></div>
+							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>Building LLM Applications With Prompt Engineering, NVIDIA Deep Learning Institute (Sep 2026)</h4></div>
 						</div>
-						<h3 class="training-heading">Training</h3>
+						<h3 class="training-heading"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-school"></use></svg><span>Training</span></h3>
 						<div class="certifications-list">
-							<div class="cert-item"><h4>AWS Academy Graduate - Cloud Foundations - Training Badge (2022)</h4></div>
+							<div class="cert-item"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><h4>AWS Academy Graduate - Cloud Foundations - Training Badge (2022)</h4></div>
 						</div>
 					</div>
 				</div>
@@ -598,9 +682,10 @@
 						<div class="contact-item"><strong>Email:</strong> <a href="mailto:wellington-gwavava@utulsa.edu">wellington-gwavava@utulsa.edu</a></div>
 						<div class="contact-item"><strong>Location:</strong> Tulsa, OK</div>
 						<div class="social-links-contact">
-							<a href="https://www.linkedin.com/in/wellingtongwavava" target="_blank" rel="noopener noreferrer" class="btn btn--outline">LinkedIn</a>
-							<a href="https://github.com/wellytg" target="_blank" rel="noopener noreferrer" class="btn btn--outline">GitHub</a>
-							<a href="https://www.credly.com/users/wellington-gwavava/badges" target="_blank" rel="noopener noreferrer" class="btn btn--outline">Credly</a>
+							<a href="mailto:wellington-gwavava@utulsa.edu" class="btn btn--outline btn--icon"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-mail"></use></svg><span>Email</span></a>
+							<a href="https://www.linkedin.com/in/wellingtongwavava" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--icon"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-linkedin"></use></svg><span>LinkedIn</span></a>
+							<a href="https://github.com/wellytg" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--icon"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-github"></use></svg><span>GitHub</span></a>
+							<a href="https://www.credly.com/users/wellington-gwavava/badges" target="_blank" rel="noopener noreferrer" class="btn btn--outline btn--icon"><svg class="icon icon--md" aria-hidden="true" focusable="false"><use href="#i-verified"></use></svg><span>Credly</span></a>
 						</div>
 					</div>
 					<!-- MUTED 2026-08-18 (kept muted 2026-10-30): contact form.
