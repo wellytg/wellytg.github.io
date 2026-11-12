@@ -311,6 +311,8 @@ check('site HTML uses the final hackathon wording only', () => {
 	assert.ok(html.includes(CONTEXT_FORGE_LINE), 'Context Forge line missing from index.html');
 	const cfBlocks = html.split(/<div class="(?:project|research)-card">/).filter((b) => /context.?forge|techxchange/i.test(b));
 	assert.equal(cfBlocks.length, 2, 'expected a Projects card and a Community card for Context Forge');
+	const cfProject = cfBlocks.find((b) => b.includes('context-forge-hackathon'));
+	assert.ok(cfProject && cfProject.includes('href="https://youtu.be/z53_IAGWJXo"') && />Demo video</.test(cfProject), 'Demo video button missing from the Context Forge card');
 	for (const b of cfBlocks) assert.ok(!/\bbuilt\b|\bwrote\b|\bcoded\b|\btrack\b|finalist|winner|\bprize\b/i.test(b), b);
 });
 
